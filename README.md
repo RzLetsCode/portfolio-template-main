@@ -38,13 +38,13 @@ This template is a responsive portfolio website that can be used by developers, 
 2. Clone your forked repository to your local machine using the following command:
 
    ```bash
-   git clone https://github.com/iluskaland/portfolio-template.git
+   git clone https://github.com/RzLetsCode/portfolio-template-main.git
 
 Now, you have your own fork of the repository, and you can make changes and contributions as described in the "Contributing" section.
 
 ## Usage
 
-To view the live demonstration of this portfolio template, visit [this link](https://iluskaland.github.io/portfolio-template/index.html). You can customize the content and styles to create your own portfolio website. Feel free to replace the content with your information and add your projects.
+To view the live demonstration of this portfolio template, visit [this link](https://rzletscode.github.io/portfolio-template-main/index.html). You can customize the content and styles to create your own portfolio website. Feel free to replace the content with your information and add your projects.
 
 ## Customization
 
@@ -60,7 +60,7 @@ Now featuring dark mode support! The portfolio website automatically adapts to y
 
 Check out this portfolio created using this template:
 
-1. [iluskaland-portfolio](https://iluskaland-portfolio.netlify.app/) - A showcase of what you can achieve with this template.
+1. [iluskaland-portfolio](https://rzletscode.github.io/portfolio-template-main/index.html) - A showcase of what you can achieve with this template.
 
 *I intentionally did not enable the dark preference on my website, because I prefer the light mode.*
 
@@ -101,6 +101,6 @@ I've put a lot of effort into creating this portfolio template, and I'm thrilled
 
 ## Contact
 
-[Github](https://github.com/iluskaland)
+[Github](https://github.com/RzLetsCode)
 
 Feel free to reach out if you have any questions or feedback!
