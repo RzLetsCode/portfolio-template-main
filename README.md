@@ -60,7 +60,7 @@ Now featuring dark mode support! The portfolio website automatically adapts to y
 
 Check out this portfolio created using this template:
 
-1. [iluskaland-portfolio](https://rzletscode.github.io/portfolio-template-main/index.html) - A showcase of what you can achieve with this template.
+1. [rajesh-portfolio](https://rzletscode.github.io/portfolio-template-main/index.html) - A showcase of what you can achieve with this template.
 
 *I intentionally did not enable the dark preference on my website, because I prefer the light mode.*
 
