@@ -477,5 +477,126 @@ footer {
         grid-template-columns: 1fr;
         gap: 1.5rem;
     }
+
+    /* Enhanced Styling for Modern Look */
+
+/* Improved Card Styling */
+.column-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(34, 213, 238, 0.15);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.column-card:hover {
+  box-shadow: 0 8px 24px rgba(34, 213, 238, 0.25);
+  transform: translateY(-4px);
+}
+
+.box {
+  border-radius: 10px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+/* Enhanced Button Styling */
+.button-outline {
+  transition: all 0.3s ease-in-out;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.button-outline:hover {
+  background-color: rgba(34, 213, 238, 0.1);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(34, 213, 238, 0.2);
+}
+
+/* Video Container Enhancements */
+.video-container {
+  border-radius: 10px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #0b1020 0%, #1a1a2e 100%);
+  padding: 2rem 0;
+}
+
+.video-wrapper {
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 1rem 0;
+}
+
+.video-wrapper::-webkit-scrollbar {
+  height: 8px;
+}
+
+.video-wrapper::-webkit-scrollbar-track {
+  background: rgba(34, 213, 238, 0.1);
+  border-radius: 10px;
+}
+
+.video-wrapper::-webkit-scrollbar-thumb {
+  background: rgba(34, 213, 238, 0.5);
+  border-radius: 10px;
+}
+
+.video-wrapper::-webkit-scrollbar-thumb:hover {
+  background: rgba(34, 213, 238, 0.8);
+}
+
+/* Image Optimization */
+.box, img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+img[alt="profile-pic"],
+img[alt*="Team Member"],
+img[alt*="Rajesh"] {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Smooth Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.column-card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Resources Section Enhancement */
+#resources {
+  scroll-margin-top: 100px;
+}
+
+.main-title {
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+.main-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #22d5ee 0%, #3a86ff 100%);
+  border-radius: 2px;
+}
+
+}
 }
 }
