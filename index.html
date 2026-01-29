@@ -1,273 +1,260 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <base href="/portfolio-template-main/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Code2Career_AI - Empowering AI and Data Science careers through education, mentorship, and hands-on learning">
-    <meta name="keywords" content="Code2Career_AI, AI Education, Data Science, Machine Learning, GenAI, Agentic AI, Career Development">
-    <meta name="author" content="Code2Career_AI Team">
-    <title>Code2Career_AI | Empowering AI & Data Science Careers</title>
-    
-    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    
-    <!-- Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&display=swap" rel="stylesheet">
+    <title>Code2Career_AI | Guiding You into Careers of the Future</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-blue': '#06b6d4',
+                        'neon-purple': '#ec4899',
+                        'deep-slate': '#0f172a',
+                        'charcoal': '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .neon-glow {
+            box-shadow: 0 0 20px rgba(6, 182, 212, 0.5), 0 0 40px rgba(236, 72, 153, 0.3);
+        }
+        .gradient-text {
+            background: linear-gradient(135deg, #06b6d4 0%, #ec4899 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .particle {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.3;
+            animation: float 20s infinite linear;
+        }
+        @keyframes float {
+            0% { transform: translateY(0) translateX(0); }
+            100% { transform: translateY(-100vh) translateX(100vw); }
+        }
+        .resource-scroll::-webkit-scrollbar {
+            height: 6px;
+        }
+        .resource-scroll::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .resource-scroll::-webkit-scrollbar-thumb {
+            background: #06b6d4;
+            border-radius: 10px;
+        }
+    </style>
 </head>
+<body class="bg-deep-slate text-white font-sans selection:bg-neon-purple/30 overflow-x-hidden">
+    <!-- Particle Background -->
+    <div id="particles" class="fixed inset-0 z-0"></div>
 
-<body class="theme-dark">
-    <!-- navigation bar -->
-    <nav class="sticky">
-        <label for="drop" class="toggle" id="main-toggle">
-            <span class="nav-icon"></span>
-        </label>
-        <input type="checkbox" id="drop">
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="#team">Team</a></li>
-            <li><a href="#resources">Resources</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="#contact-me">Contact</a></li>
-        </ul>
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full z-50 glassmorphism border-b border-white/10 px-6 py-4">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 bg-gradient-to-tr from-neon-blue to-neon-purple rounded-lg flex items-center justify-center font-bold text-xl">C2C</div>
+                <span class="text-xl font-bold tracking-tight">Code2Career<span class="text-neon-blue">_AI</span></span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
+                <a href="#home" class="hover:text-neon-blue transition">Home</a>
+                <a href="#resources" class="hover:text-neon-blue transition">Resources</a>
+                <a href="#team" class="hover:text-neon-blue transition">Team</a>
+                <a href="#contact" class="hover:text-neon-blue transition">Contact</a>
+            </div>
+            <button class="md:hidden text-2xl">☰</button>
+        </div>
     </nav>
 
-    <!-- Hero / Introduction -->
-    <header class="grid-system-2 w-900 padding">
-        <section class="align-center">
-            <h1 class="medium-spacing">Welcome to</h1>
-            <h1 class="large colorful-letter">Code2Career_AI</h1>
-            <p class="justify">
-                We are on a mission to <strong>empower aspiring AI professionals</strong> with the skills, knowledge, and
-                hands-on experience needed to build successful careers in Artificial Intelligence, Data Science, and
-                Machine Learning.
-            </p>
-            <p class="justify">
-                From foundational concepts to advanced GenAI and agentic AI systems, we provide structured learning paths,
-                real-world projects, mentorship, and a supportive community to help you transition from learning to
-                building production-ready AI solutions.
-            </p>
-        </section>
-        <section class="center align-center">
-            <img class="header-img max-width max-height" src="assets/profile-pic.png" alt="Code2Career_AI">
-        </section>
-    </header>
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
+            <div>
+                <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
+                    BUILD THE <br>
+                    <span class="gradient-text">FUTURE</span> OF AI
+                </h1>
+                <p class="text-xl text-gray-400 mb-10 max-w-lg leading-relaxed">
+                    Empowering the next generation of Data Scientists and AI Architects through hands-on learning and enterprise-grade expertise.
+                </p>
+                <div class="flex space-x-4">
+                    <button class="bg-neon-blue hover:bg-neon-blue/80 px-8 py-4 rounded-full font-bold transition neon-glow">Get Started</button>
+                    <button class="border border-white/20 hover:bg-white/10 px-8 py-4 rounded-full font-bold transition">Learn More</button>
+                </div>
+            </div>
+            <div class="relative group">
+                <div class="absolute -inset-1 bg-gradient-to-r from-neon-blue to-neon-purple rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
+                <div class="relative glassmorphism p-4 rounded-2xl border border-white/10">
+                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1600" alt="AI Visualization" class="rounded-xl shadow-2xl w-full object-cover h-[500px]">
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <!-- Mission / Vision -->
-    <article class="baby-pink">
-        <p class="quote uppercase">
-            Empowering careers through AI education, mentorship, and real-world projects.
-        </p>
-        <p>
-            At Code2Career_AI, we believe that practical, hands-on learning combined with strong fundamentals is the
-            fastest path to becoming a confident AI professional. We bridge the gap between theory and production
-            through our YouTube channel, open-source projects, and community-driven learning.
-        </p>
-    </article>
+    <!-- Resource Section (Modern Horizontal Scroll) -->
+    <section id="resources" class="py-24 px-6 relative z-10">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex justify-between items-end mb-12">
+                <div>
+                    <h2 class="text-4xl font-bold mb-2">Learning Resources</h2>
+                    <p class="text-gray-400">Hand-picked content from our official YouTube and Blogs</p>
+                </div>
+                <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="text-neon-blue hover:underline font-medium">Visit YouTube Channel →</a>
+            </div>
+            
+            <div class="resource-scroll flex space-x-6 overflow-x-auto pb-8 scroll-smooth snap-x">
+                <!-- Resource Card 1 -->
+                <div class="min-w-[350px] snap-center glassmorphism rounded-2xl p-4 border border-white/10 group">
+                    <div class="relative aspect-video mb-4 rounded-xl overflow-hidden">
+                        <img src="https://img.youtube.com/vi/S7-V8_v4s30/0.jpg" alt="Video Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            <div class="w-12 h-12 bg-neon-blue rounded-full flex items-center justify-center pl-1 text-white">▶</div>
+                        </div>
+                    </div>
+                    <span class="text-xs text-neon-blue font-bold uppercase tracking-widest mb-2 block">YouTube</span>
+                    <h3 class="text-lg font-bold mb-2">Advanced RAG Architecture</h3>
+                    <p class="text-sm text-gray-400 mb-4">Deep dive into building enterprise-grade RAG systems with Snowflake.</p>
+                    <a href="https://www.youtube.com/@Code2Career_AI" class="text-neon-purple text-sm font-bold hover:underline">Watch Now →</a>
+                </div>
 
-    <!-- About Code2Career_AI -->
-    <section class="wrapper">
-        <section class="margin-auto">
-            <img class="max-width max-height" src="assets/about-me.png" alt="about-code2career-ai">
-        </section>
-        <section class="justify align-center">
-            <p class="bold">About Code2Career_AI</p>
-            <p>
-                Code2Career_AI is a platform built by AI practitioners for aspiring AI professionals. We provide
-                end-to-end learning resources covering data engineering, machine learning, GenAI, LangChain, LangGraph,
-                MLOps, and enterprise AI architecture.
-            </p>
-            <p>
-                Our community-driven approach ensures you learn not just concepts, but also best practices, deployment
-                strategies, and career insights from people actively working in the industry.
-            </p>
-            <p>
-                Whether you're a beginner starting your AI journey or an experienced developer looking to specialize in
-                GenAI and agentic systems, Code2Career_AI offers resources, projects, and guidance tailored to your
-                goals.
-            </p>
-            <p class="padding-top">
-                <a href="about-me.html" class="button-outline">Learn More About Us</a>
-            </p>
-        </section>
+                <!-- Resource Card 2 -->
+                <div class="min-w-[350px] snap-center glassmorphism rounded-2xl p-4 border border-white/10 group">
+                    <div class="relative aspect-video mb-4 rounded-xl overflow-hidden bg-charcoal">
+                        <div class="absolute inset-0 bg-gradient-to-br from-neon-purple/20 to-neon-blue/20"></div>
+                        <div class="absolute inset-0 flex items-center justify-center font-bold text-2xl text-white/50">BLOG POST</div>
+                    </div>
+                    <span class="text-xs text-neon-purple font-bold uppercase tracking-widest mb-2 block">Article</span>
+                    <h3 class="text-lg font-bold mb-2">The Future of Agentic AI</h3>
+                    <p class="text-sm text-gray-400 mb-4">How multi-agent systems are redefining autonomous operations in 2025.</p>
+                    <a href="#" class="text-neon-purple text-sm font-bold hover:underline">Read Article →</a>
+                </div>
+
+                <!-- Resource Card 3 -->
+                <div class="min-w-[350px] snap-center glassmorphism rounded-2xl p-4 border border-white/10 group">
+                    <div class="relative aspect-video mb-4 rounded-xl overflow-hidden">
+                        <img src="https://img.youtube.com/vi/S7-V8_v4s30/maxresdefault.jpg" alt="Video Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
+                            <div class="w-12 h-12 bg-neon-blue rounded-full flex items-center justify-center pl-1 text-white">▶</div>
+                        </div>
+                    </div>
+                    <span class="text-xs text-neon-blue font-bold uppercase tracking-widest mb-2 block">YouTube</span>
+                    <h3 class="text-lg font-bold mb-2">LangGraph Implementation</h3>
+                    <p class="text-sm text-gray-400 mb-4">Step-by-step guide to building circular AI workflows with LangGraph.</p>
+                    <a href="https://www.youtube.com/@Code2Career_AI" class="text-neon-purple text-sm font-bold hover:underline">Watch Now →</a>
+                </div>
+
+                <!-- Resource Card 4 (Placeholder) -->
+                <div class="min-w-[350px] snap-center glassmorphism rounded-2xl p-4 border border-white/10 group">
+                    <div class="relative aspect-video mb-4 rounded-xl overflow-hidden bg-charcoal">
+                        <div class="absolute inset-0 flex items-center justify-center font-bold text-2xl text-white/10">COMING SOON</div>
+                    </div>
+                    <span class="text-xs text-gray-500 font-bold uppercase tracking-widest mb-2 block">Next Release</span>
+                    <h3 class="text-lg font-bold mb-2 opacity-50">Vector Store Optimization</h3>
+                    <p class="text-sm text-gray-400 mb-4 opacity-50">Mastering indexing strategies for high-performance AI apps.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Team Section -->
-    <section id="team">
-        <h3 class="main-title center padding">Meet Our Team</h3>
-    </section>
-    <section class="wrapper">
-        <!-- Team Member 1 - Rajesh Kumar -->
-        <section class="column card justify flex">
-            <img class="box" src="assets/profile-pic.png" alt="Rajesh Kumar - Founder">
-            <p class="padding bold center">Rajesh Kumar</p>
-            <p class="center colorful-letter">Founder & Lead AI Architect</p>
-            <p>
-                Enterprise AI Architect with 12+ years of experience designing GenAI platforms, agentic AI systems, and
-                scalable data products for global enterprises. Passionate about mentoring and sharing practical AI
-                knowledge.
-            </p>
-            <p class="padding-top bottom">
-                <a href="about-me.html" class="button-outline">View Profile</a>
-            </p>
-        </section>
+    <section id="team" class="py-24 px-6 relative z-10 bg-black/20">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold mb-12 text-center">Meet the <span class="gradient-text">Architects</span></h2>
+            <div id="teamGrid" class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Team Card 1 -->
+                <div class="glassmorphism p-8 rounded-3xl text-center hover:neon-glow transition-all duration-500 group">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-neon-blue p-1 group-hover:scale-110 transition duration-500">
+                        <div class="w-full h-full rounded-full bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center text-4xl font-bold">RK</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-1">Rajesh Kumar</h3>
+                    <p class="text-neon-blue text-sm font-bold uppercase tracking-widest mb-6">Founder & Lead AI Architect</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full glassmorphism flex items-center justify-center hover:bg-neon-blue transition">in</a>
+                        <a href="#" class="w-10 h-10 rounded-full glassmorphism flex items-center justify-center hover:bg-neon-purple transition">gh</a>
+                    </div>
+                </div>
 
-        <!-- Team Member 2 - Placeholder -->
-        <section class="column card justify flex">
-            <img class="box" src="assets/profile-pic.png" alt="Team Member 2">
-            <p class="padding bold center">Team Member 2</p>
-            <p class="center colorful-letter">Role / Title</p>
-            <p>
-                Brief bio and expertise of team member 2. Highlight their specialization in AI, data science, or related
-                fields. Describe their contribution to Code2Career_AI and the community.
-            </p>
-            <p>
-                Add details about their background, experience, teaching style, or any specific domains they focus on
-                such as MLOps, NLP, Computer Vision, or Data Engineering.
-            </p>
-            <p class="padding-top bottom">
-                <a href="#" class="button-outline">View Profile</a>
-            </p>
-        </section>
+                <!-- Team Card 2 (Placeholder) -->
+                <div class="glassmorphism p-8 rounded-3xl text-center hover:neon-glow transition-all duration-500 group">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-white/10 p-1 group-hover:scale-110 transition duration-500">
+                        <div class="w-full h-full rounded-full bg-charcoal flex items-center justify-center text-4xl font-bold opacity-30">TM</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-1">Team Member 2</h3>
+                    <p class="text-gray-500 text-sm font-bold uppercase tracking-widest mb-6">ML Engineer</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full glassmorphism flex items-center justify-center hover:bg-neon-blue transition">in</a>
+                    </div>
+                </div>
 
-        <!-- Team Member 3 - Placeholder -->
-        <section class="column card justify flex">
-            <img class="box" src="assets/profile-pic.png" alt="Team Member 3">
-            <p class="padding bold center">Team Member 3</p>
-            <p class="center colorful-letter">Role / Title</p>
-            <p>
-                Brief bio and expertise of team member 3. Highlight their specialization in AI, data science, or related
-                fields. Describe their contribution to Code2Career_AI and the community.
-            </p>
-            <p>
-                Add details about their background, experience, teaching style, or any specific domains they focus on
-                such as GenAI, Deep Learning, or Cloud Platforms.
-            </p>
-            <p class="padding-top bottom">
-                <a href="#" class="button-outline">View Profile</a>
-            </p>
-        </section>
-    </section>
-
-    <!-- YouTube Resources Section -->
-    <section id="Resources">
-        <h3 class="main-title center padding">Latest from Our YouTube Channel</h3>
-        <p class="center justify w-900">
-            Subscribe to our <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="link colorful-letter"><strong>Code2Career_AI YouTube channel</strong></a> for in-depth tutorials, project walkthroughs, career guidance, and hands-on AI learning content.
-        </p>
-    </section>
-
-    <!-- YouTube Video Grid -->
-    <section class="wrapper w-900">
-        <!-- Video 1 Placeholder -->
-        <section class="column card justify flex">
-            <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" 
-                    title="YouTube video 1" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
+                <!-- Team Card 3 (Placeholder) -->
+                <div class="glassmorphism p-8 rounded-3xl text-center hover:neon-glow transition-all duration-500 group">
+                    <div class="w-32 h-32 mx-auto mb-6 rounded-full overflow-hidden border-2 border-white/10 p-1 group-hover:scale-110 transition duration-500">
+                        <div class="w-full h-full rounded-full bg-charcoal flex items-center justify-center text-4xl font-bold opacity-30">TM</div>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-1">Team Member 3</h3>
+                    <p class="text-gray-500 text-sm font-bold uppercase tracking-widest mb-6">Data Scientist</p>
+                    <div class="flex justify-center space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full glassmorphism flex items-center justify-center hover:bg-neon-blue transition">in</a>
+                    </div>
+                </div>
             </div>
-            <p class="padding bold center">Video Title 1</p>
-            <p>
-                Brief description of this video. What topics are covered? Who is it for? Replace YOUR_VIDEO_ID_1 with
-                the actual YouTube video ID from your channel.
-            </p>
-            <p class="padding-top bottom">
-                <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="button-outline">Watch Now</a>
-            </p>
-        </section>
-
-        <!-- Video 2 Placeholder -->
-        <section class="column card justify flex">
-            <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" 
-                    title="YouTube video 2" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <p class="padding bold center">Video Title 2</p>
-            <p>
-                Brief description of this video. What topics are covered? Who is it for? Replace YOUR_VIDEO_ID_2 with
-                the actual YouTube video ID from your channel.
-            </p>
-            <p class="padding-top bottom">
-                <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="button-outline">Watch Now</a>
-            </p>
-        </section>
-
-        <!-- Video 3 Placeholder -->
-        <section class="column card justify flex">
-            <div class="video-container">
-                <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" 
-                    title="YouTube video 3" frameborder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                    allowfullscreen>
-                </iframe>
-            </div>
-            <p class="padding bold center">Video Title 3</p>
-            <p>
-                Brief description of this video. What topics are covered? Who is it for? Replace YOUR_VIDEO_ID_3 with
-                the actual YouTube video ID from your channel.
-            </p>
-            <p class="padding-top bottom">
-                <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="button-outline">Watch Now</a>
-            </p>
-        </section>
-    </section>
-
-    <!-- More Resources CTA -->
-    <section class="w-900 padding center">
-        <p>
-            <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="button-outline">View All Resources on YouTube →</a>
-        </p>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact-me" class="grid-system-2 w-900 padding">
-        <section class="margin-auto">
-            <img class="max-width max-height" src="assets/Contact-me-img.png" alt="contact illustration">
-        </section>
-        <section class="margin-auto align-center">
-            <h1 class="medium-spacing center">Let's Connect!</h1>
-            <p class="justify">
-                Whether you want to join our community, collaborate on AI projects, or have questions about your AI
-                career journey, feel free to reach out through any of the channels below.
-            </p>
-            <section class="box-contact margin-auto padding-top">
-                <span>
-                    <a href="https://www.linkedin.com/in/rajesh-kumar" target="_blank">
-                        <img class="logo" src="assets/linkedin.png" alt="LinkedIn logo">
-                    </a>
-                </span>
-                <span>
-                    <a href="https://github.com/RzLetsCode" target="_blank">
-                        <img class="logo" src="assets/github.png" alt="GitHub logo">
-                    </a>
-                </span>
-                <span>
-                    <a href="https://www.youtube.com/@Code2Career_AI" target="_blank">
-                        <img class="logo" src="assets/email.png" alt="YouTube icon">
-                    </a>
-                </span>
-                <span>
-                    <a href="mailto:contact@code2career.ai" target="_blank">
-                        <img class="logo" src="assets/email.png" alt="email icon">
-                    </a>
-                </span>
-            </section>
-        </section>
+        </div>
     </section>
 
     <!-- Footer -->
-    <footer>@code2career_ai 2026</footer>
-</body>
+    <footer class="py-12 px-6 border-t border-white/10 relative z-10">
+        <div class="max-w-7xl mx-auto flex flex-col md:row justify-between items-center space-y-6 md:space-y-0">
+            <div class="flex items-center space-x-2">
+                <div class="w-8 h-8 bg-gradient-to-tr from-neon-blue to-neon-purple rounded flex items-center justify-center font-bold text-sm">C2C</div>
+                <span class="font-bold tracking-tight">Code2Career<span class="text-neon-blue">_AI</span></span>
+            </div>
+            <p class="text-gray-500 text-sm">© 2025 Code2Career_AI. All rights reserved.</p>
+            <div class="flex space-x-6 text-gray-400">
+                <a href="#" class="hover:text-white transition">Twitter</a>
+                <a href="https://www.youtube.com/@Code2Career_AI" class="hover:text-white transition">YouTube</a>
+                <a href="#" class="hover:text-white transition">LinkedIn</a>
+            </div>
+        </div>
+    </footer>
 
+    <script>
+        // Simple Particle System
+        const particlesContainer = document.getElementById('particles');
+        const count = 50;
+
+        for (let i = 0; i < count; i++) {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            
+            const size = Math.random() * 3 + 1;
+            const posX = Math.random() * 100;
+            const posY = Math.random() * 100;
+            const duration = Math.random() * 10 + 10;
+            const delay = Math.random() * -20;
+
+            particle.style.width = `${size}px`;
+            particle.style.height = `${size}px`;
+            particle.style.left = `${posX}%`;
+            particle.style.top = `${posY}%`;
+            particle.style.animationDuration = `${duration}s`;
+            particle.style.animationDelay = `${delay}s`;
+
+            particlesContainer.appendChild(particle);
+        }
+    </script>
+</body>
 </html>
