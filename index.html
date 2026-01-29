@@ -5,34 +5,21 @@
     <base href="/portfolio-template-main/">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Review this part and modify it to your liking -->
-    <meta name="description" content="Sample text for portfolio template meta tag">
-    <meta name="keywords" content="Sample text for portfolio template meta tag">
-    <meta name="author" content="Sample text for portfolio template meta tag">
-    <title>My portfolio website</title>
-    <!-- Adding favicon for older and modern browsers,
-        It is best to add favicon to the main folder, 
-        I used an only ico converter for best result,
-        Do not forget to clear you cache to see the changes -->
+    <meta name="description" content="Code2Career_AI - Empowering AI and Data Science careers through education, mentorship, and hands-on learning">
+    <meta name="keywords" content="Code2Career_AI, AI Education, Data Science, Machine Learning, GenAI, Agentic AI, Career Development">
+    <meta name="author" content="Code2Career_AI Team">
+    <title>Code2Career_AI | Empowering AI & Data Science Careers</title>
+    
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- font for the quote -->
+    
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body class="theme-dark">
@@ -44,278 +31,242 @@
         <input type="checkbox" id="drop">
         <ul class="main-nav">
             <li><a href="index.html">Home</a></li>
-            <li><a href="about-me.html">About me</a></li>
-            <li><a href="skill-set.html">Skill-set</a></li>
+            <li><a href="#team">Team</a></li>
+            <li><a href="#videos">Videos</a></li>
             <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="#contact-me">Contact me</a></li>
+            <li><a href="#contact-me">Contact</a></li>
         </ul>
     </nav>
 
-    <!-- introduction
+    <!-- Hero / Introduction -->
     <header class="grid-system-2 w-900 padding">
         <section class="align-center">
-            <h1 class="medium-spacing">Hello, I am</h1>
-            <h1 class="large">Your name</h1>
-            <p class="justify">That large class above is only suitable for short names/nicknames. If you want to display
-                your full name there, consider using the "medium-spacing" and "colorful-letter" classes instead, to
-                maintain responsiveness.</p>
+            <h1 class="medium-spacing">Welcome to</h1>
+            <h1 class="large colorful-letter">Code2Career_AI</h1>
+            <p class="justify">
+                We are on a mission to <strong>empower aspiring AI professionals</strong> with the skills, knowledge, and
+                hands-on experience needed to build successful careers in Artificial Intelligence, Data Science, and
+                Machine Learning.
+            </p>
+            <p class="justify">
+                From foundational concepts to advanced GenAI and agentic AI systems, we provide structured learning paths,
+                real-world projects, mentorship, and a supportive community to help you transition from learning to
+                building production-ready AI solutions.
+            </p>
         </section>
         <section class="center align-center">
-            <img class="header-img max-width max-height" src="assets/profile-pic.png" alt="profile-picture">
+            <img class="header-img max-width max-height" src="assets/profile-pic.png" alt="Code2Career_AI">
         </section>
-    </header> -->
+    </header>
 
-    <!-- introduction -->
-<!-- <header class="grid-system-2 w-900 padding">
-  <section class="align-center">
-    <h1 class="medium-spacing">Hello, I am</h1>
-    <h1 class="large colorful-letter">Rajesh Kumar</h1>
-    <p class="justify">
-      I am an **Enterprise** AI Architect , focused on building GenAI platforms, agentic AI
-      systems, and scalable data products for enterprises. I connect architecture, data engineering, and machine
-      learning to turn complex business problems into production-ready AI solutions.
-    </p>
-  </section>
-  <section class="center align-center">
-    <img class="header-img max-width max-height" src="assets/profile-pic.png" alt="profile-picture">
-  </section>
-</header> -->
-
-<!-- introduction -->
-<header class="grid-system-2 w-900 padding">
-  <section class="align-center">
-    <h1 class="medium-spacing">Hello, I am</h1>
-    <h1 class="large colorful-letter">Rajesh Kumar</h1>
-    <p class="justify">
-      I am an <strong>Enterprise AI Architect</strong>, focused on building GenAI platforms, agentic AI
-      systems, and scalable data products for enterprises. I connect architecture, data engineering, and
-      machine learning to turn complex business problems into production-ready AI solutions.
-    </p>
-  </section>
-  <section class="center align-center">
-    <img class="header-img max-width max-height" src="assets/profile-pic.png" alt="profile-picture">
-  </section>
-</header>
-
-<!-- quote -->
-<article class="baby-pink">
-  <p class="quote uppercase">
-    Building AI that ships, scales, and actually gets used.
-  </p>
-  <p>
-    I design and deploy enterprise-ready GenAI and data platforms that turn ideas into reliable products,
-    not just demos.
-  </p>
-</article>
-
-<!-- about me -->
-<section class="wrapper">
-  <section class="margin-auto">
-    <img class="max-width max-height" src="assets/about-me.png" alt="about-me-logo">
-  </section>
-  <section class="justify align-center">
-    <p class="bold">About me</p>
-    <p>
-      AI Architect with 12+ years of experience designing scalable data platforms, GenAI solutions, and
-      production-grade ML systems for global enterprises.
-    </p>
-    <p>
-      My work sits at the intersection of architecture, data engineering, and machine learning—helping
-      teams move from proof-of-concept notebooks to secure, observable, and cost-aware AI in production.
-    </p>
-    <p>
-      I enjoy turning complex business problems into simple, composable architectures, mentoring engineers,
-      and sharing real-world lessons from building AI products through talks, blogs, and open-source work.
-    </p>
-    <p class="padding-top">
-      <a href="about-me.html" class="button-outline">More info</a>
-    </p>
-  </section>
-</section>
-
-<!-- skills -->
-<section>
-  <h3 class="main-title center padding">Skills</h3>
-</section>
-
-<section class="wrapper">
-  <!-- Technical skills -->
-  <section class="column">
-    <p class="padding-bottom">Technical skills</p>
-    <section class="skills">
-      <ul class="no-bullet-list no-padding-list-item">
-        <li>
-          <p>Python, Pandas, NumPy</p>
-          <span class="progress-bar"><span class="python"></span></span>
-        </li>
-        <li>
-          <p>Machine learning, MLOps</p>
-          <span class="progress-bar"><span class="ml-mlops"></span></span>
-        </li>
-        <li>
-          <p>Generative AI, RAG, agentic AI</p>
-          <span class="progress-bar"><span class="genai"></span></span>
-        </li>
-        <li>
-          <p>Data engineering (Spark, Kafka, SQL)</p>
-          <span class="progress-bar"><span class="data-eng"></span></span>
-        </li>
-        <li>
-          <p>Cloud &amp; platforms (Azure, Snowflake)</p>
-          <span class="progress-bar"><span class="cloud"></span></span>
-        </li>
-      </ul>
-    </section>
-  </section>
-
-  <!-- Professional skills -->
-  <section class="column">
-    <p class="padding-bottom">Professional skills</p>
-    <section class="skills">
-      <ul class="no-bullet-list no-padding-list-item">
-        <li>
-          <p>Technical leadership &amp; mentoring</p>
-          <span class="progress-bar"><span class="leadership"></span></span>
-        </li>
-        <li>
-          <p>Architecture &amp; system design</p>
-          <span class="progress-bar"><span class="architecture"></span></span>
-        </li>
-        <li>
-          <p>Stakeholder communication</p>
-          <span class="progress-bar"><span class="comm-adapt"></span></span>
-        </li>
-        <li>
-          <p>Problem solving &amp; delivery</p>
-          <span class="progress-bar"><span class="problem-solving"></span></span>
-        </li>
-        <li>
-          <p>Collaboration &amp; mentoring</p>
-          <span class="progress-bar"><span class="team-player"></span></span>
-        </li>
-      </ul>
-    </section>
-  </section>
-</section>
-
-<!-- Projects -->
-<section>
-  <h3 class="main-title center padding">Projects I am currently working on</h3>
-</section>
-
-<section class="wrapper">
-  <!-- Project 1 -->
-  <section class="column card justify flex">
-    <img class="box" src="assets/project1.png" alt="Enterprise LLM Platform">
-    <p class="padding bold center">Enterprise LLM &amp; RAG Platform</p>
-    <p>
-      Architecture and implementation of a secure, scalable LLM platform combining Snowflake, vector search,
-      and LangGraph-based orchestration for enterprise use cases.
-    </p>
-    <p>
-      The system supports multi-tenant knowledge bases, guardrailed retrieval, and observability so product and
-      data teams can ship GenAI features with traceability and compliance built in.
-    </p>
-    <p class="padding-top bottom">
-      <a href="portfolio.html" class="button-outline">View details</a>
-    </p>
-  </section>
-
-  <!-- Project 3 -->
-  <section class="column card justify flex">
-    <img class="box" src="assets/project3.png" alt="GenAI Brochure Generator">
-    <p class="padding bold center">GenAI Marketing Content &amp; Brochure Generator</p>
-    <p>
-      A GenAI-driven tool that generates on-brand brochures, emails, and landing-page copy from structured
-      product and customer data, reducing content turnaround time for business teams.
-    </p>
-    <p>
-      It uses retrieval-augmented generation with reusable templates, tone controls, and review workflows so
-      marketing and sales teams can scale content without losing quality or compliance.
-    </p>
-    <p class="padding-top bottom">
-      <a href="portfolio.html" class="button-outline">View details</a>
-    </p>
-  </section>
-</section>
-
-<!-- contact me -->
-<section id="contact-me" class="grid-system-2 w-900 padding">
-  <section class="margin-auto">
-    <img class="max-width max-height" src="assets/Contact-me-img.png" alt="contact illustration">
-  </section>
-
-  <section class="margin-auto align-center">
-    <h1 class="medium-spacing center">Let's get in touch!</h1>
-    <p class="justify">
-      Whether you want to discuss <strong>enterprise GenAI architectures</strong>, data platforms, or potential
-      collaboration, feel free to reach out through any of the channels below.
-    </p>
-
-    <section class="box-contact margin-auto padding-top">
-      <span>
-        <a href="https://www.linkedin.com/in/rajesh-kumar" target="_blank">
-          <img class="logo" src="assets/linkedin.png" alt="LinkedIn logo">
-        </a>
-      </span>
-      <span>
-        <a href="https://github.com/RzLetsCode" target="_blank">
-          <img class="logo" src="assets/github.png" alt="GitHub logo">
-        </a>
-      </span>
-      <span>
-        <a href="mailto:your.email@example.com" target="_blank">
-          <img class="logo" src="assets/email.png" alt="email icon">
-        </a>
-      </span>
-    </section>
-  </section>
-</section>
-
-
-    <!-- special thanks -->
-    <!-- Here you can see the free resources I've used for the logos and illustrations. Do not forget to give credit to the creators of the free stuffs use may use additionally -->
-    <!-- <section>
-        <p class="small thanks justify w-900 padding-left">*Thanks for the illustration:
-            <a class="link colorful-letter" href="https://storyset.com/work" target="_blank">work illustrations</a> by
-            Storyset
-
+    <!-- Mission / Vision -->
+    <article class="baby-pink">
+        <p class="quote uppercase">
+            Empowering careers through AI education, mentorship, and real-world projects.
         </p>
-        <p class="small thanks justify w-900 padding-left">*Thanks for the icons:
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Flatart" target="_blank">flatart,
-                </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/font-awesome" target="_blank">font
-                    awesome, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/fluent-designsystem"
-                    target="_blank">microsoft, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Chanut-is" target="_blank">chanut is
-                    indurstries, </a></span>
-            <span><a class="link colorful-letter" href="https://www.iconfinder.com/Kalashnyk" target="_blank">kalash
-                </a></span>
-            on Iconfinder
+        <p>
+            At Code2Career_AI, we believe that practical, hands-on learning combined with strong fundamentals is the
+            fastest path to becoming a confident AI professional. We bridge the gap between theory and production
+            through our YouTube channel, open-source projects, and community-driven learning.
         </p>
-    </section> -->
+    </article>
 
-    <!-- special thanks -->
-<!-- <section>
-  <p class="small thanks justify w-900 padding-left">
-    *Special thanks to my mentors, colleagues, and leaders across different organizations for the continuous guidance, hard problems, and trust over the years.
-  </p>
+    <!-- About Code2Career_AI -->
+    <section class="wrapper">
+        <section class="margin-auto">
+            <img class="max-width max-height" src="assets/about-me.png" alt="about-code2career-ai">
+        </section>
+        <section class="justify align-center">
+            <p class="bold">About Code2Career_AI</p>
+            <p>
+                Code2Career_AI is a platform built by AI practitioners for aspiring AI professionals. We provide
+                end-to-end learning resources covering data engineering, machine learning, GenAI, LangChain, LangGraph,
+                MLOps, and enterprise AI architecture.
+            </p>
+            <p>
+                Our community-driven approach ensures you learn not just concepts, but also best practices, deployment
+                strategies, and career insights from people actively working in the industry.
+            </p>
+            <p>
+                Whether you're a beginner starting your AI journey or an experienced developer looking to specialize in
+                GenAI and agentic systems, Code2Career_AI offers resources, projects, and guidance tailored to your
+                goals.
+            </p>
+            <p class="padding-top">
+                <a href="about-me.html" class="button-outline">Learn More About Us</a>
+            </p>
+        </section>
+    </section>
 
-  <p class="small thanks justify w-900 padding-left">
-    *I’m also grateful to the wider open‑source and AI community – from Python, PyData, and ML engineers to the
-    GenAI and agentic AI builders whose tools, libraries, and ideas make work like this possible. 
-  </p>
+    <!-- Team Section -->
+    <section id="team">
+        <h3 class="main-title center padding">Meet Our Team</h3>
+    </section>
+    <section class="wrapper">
+        <!-- Team Member 1 - Rajesh Kumar -->
+        <section class="column card justify flex">
+            <img class="box" src="assets/profile-pic.png" alt="Rajesh Kumar - Founder">
+            <p class="padding bold center">Rajesh Kumar</p>
+            <p class="center colorful-letter">Founder & Lead AI Architect</p>
+            <p>
+                Enterprise AI Architect with 12+ years of experience designing GenAI platforms, agentic AI systems, and
+                scalable data products for global enterprises. Passionate about mentoring and sharing practical AI
+                knowledge.
+            </p>
+            <p class="padding-top bottom">
+                <a href="about-me.html" class="button-outline">View Profile</a>
+            </p>
+        </section>
 
-  <p class="small thanks justify w-900 padding-left">
-    *Finally, thanks to everyone who reads my posts, tries my projects, or shares feedback – you help me learn
-    faster and build more useful things.
-  </p>
-</section> -->
+        <!-- Team Member 2 - Placeholder -->
+        <section class="column card justify flex">
+            <img class="box" src="assets/profile-pic.png" alt="Team Member 2">
+            <p class="padding bold center">Team Member 2</p>
+            <p class="center colorful-letter">Role / Title</p>
+            <p>
+                Brief bio and expertise of team member 2. Highlight their specialization in AI, data science, or related
+                fields. Describe their contribution to Code2Career_AI and the community.
+            </p>
+            <p>
+                Add details about their background, experience, teaching style, or any specific domains they focus on
+                such as MLOps, NLP, Computer Vision, or Data Engineering.
+            </p>
+            <p class="padding-top bottom">
+                <a href="#" class="button-outline">View Profile</a>
+            </p>
+        </section>
 
+        <!-- Team Member 3 - Placeholder -->
+        <section class="column card justify flex">
+            <img class="box" src="assets/profile-pic.png" alt="Team Member 3">
+            <p class="padding bold center">Team Member 3</p>
+            <p class="center colorful-letter">Role / Title</p>
+            <p>
+                Brief bio and expertise of team member 3. Highlight their specialization in AI, data science, or related
+                fields. Describe their contribution to Code2Career_AI and the community.
+            </p>
+            <p>
+                Add details about their background, experience, teaching style, or any specific domains they focus on
+                such as GenAI, Deep Learning, or Cloud Platforms.
+            </p>
+            <p class="padding-top bottom">
+                <a href="#" class="button-outline">View Profile</a>
+            </p>
+        </section>
+    </section>
 
-    <!-- footer -->
-    <!-- waits for you to take over! -->
+    <!-- YouTube Videos Section -->
+    <section id="videos">
+        <h3 class="main-title center padding">Latest from Our YouTube Channel</h3>
+        <p class="center justify w-900">
+            Subscribe to our <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="link colorful-letter"><strong>Code2Career_AI YouTube channel</strong></a> for in-depth tutorials, project walkthroughs, career guidance, and hands-on AI learning content.
+        </p>
+    </section>
+
+    <!-- YouTube Video Grid -->
+    <section class="wrapper w-900">
+        <!-- Video 1 Placeholder -->
+        <section class="column card justify flex">
+            <div class="video-container">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_1" 
+                    title="YouTube video 1" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="padding bold center">Video Title 1</p>
+            <p>
+                Brief description of this video. What topics are covered? Who is it for? Replace YOUR_VIDEO_ID_1 with
+                the actual YouTube video ID from your channel.
+            </p>
+            <p class="padding-top bottom">
+                <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="button-outline">Watch Now</a>
+            </p>
+        </section>
+
+        <!-- Video 2 Placeholder -->
+        <section class="column card justify flex">
+            <div class="video-container">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_2" 
+                    title="YouTube video 2" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="padding bold center">Video Title 2</p>
+            <p>
+                Brief description of this video. What topics are covered? Who is it for? Replace YOUR_VIDEO_ID_2 with
+                the actual YouTube video ID from your channel.
+            </p>
+            <p class="padding-top bottom">
+                <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="button-outline">Watch Now</a>
+            </p>
+        </section>
+
+        <!-- Video 3 Placeholder -->
+        <section class="column card justify flex">
+            <div class="video-container">
+                <iframe width="100%" height="200" src="https://www.youtube.com/embed/YOUR_VIDEO_ID_3" 
+                    title="YouTube video 3" frameborder="0" 
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <p class="padding bold center">Video Title 3</p>
+            <p>
+                Brief description of this video. What topics are covered? Who is it for? Replace YOUR_VIDEO_ID_3 with
+                the actual YouTube video ID from your channel.
+            </p>
+            <p class="padding-top bottom">
+                <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="button-outline">Watch Now</a>
+            </p>
+        </section>
+    </section>
+
+    <!-- More Videos CTA -->
+    <section class="w-900 padding center">
+        <p>
+            <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="button-outline">View All Videos on YouTube →</a>
+        </p>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact-me" class="grid-system-2 w-900 padding">
+        <section class="margin-auto">
+            <img class="max-width max-height" src="assets/Contact-me-img.png" alt="contact illustration">
+        </section>
+        <section class="margin-auto align-center">
+            <h1 class="medium-spacing center">Let's Connect!</h1>
+            <p class="justify">
+                Whether you want to join our community, collaborate on AI projects, or have questions about your AI
+                career journey, feel free to reach out through any of the channels below.
+            </p>
+            <section class="box-contact margin-auto padding-top">
+                <span>
+                    <a href="https://www.linkedin.com/in/rajesh-kumar" target="_blank">
+                        <img class="logo" src="assets/linkedin.png" alt="LinkedIn logo">
+                    </a>
+                </span>
+                <span>
+                    <a href="https://github.com/RzLetsCode" target="_blank">
+                        <img class="logo" src="assets/github.png" alt="GitHub logo">
+                    </a>
+                </span>
+                <span>
+                    <a href="https://www.youtube.com/@Code2Career_AI" target="_blank">
+                        <img class="logo" src="assets/email.png" alt="YouTube icon">
+                    </a>
+                </span>
+                <span>
+                    <a href="mailto:contact@code2career.ai" target="_blank">
+                        <img class="logo" src="assets/email.png" alt="email icon">
+                    </a>
+                </span>
+            </section>
+        </section>
+    </section>
+
+    <!-- Footer -->
     <footer>@code2career_ai 2026</footer>
 </body>
 
