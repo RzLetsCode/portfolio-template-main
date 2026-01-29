@@ -753,3 +753,144 @@ footer{
         }
     }
 }
+
+
+
+
+
+
+
+
+
+/* Hero */
+header {
+  background: linear-gradient(135deg, #061727 0%, #062f3f 60%, #084c61 100%);
+  color: #f8fafc;
+}
+
+header .large.colorful-letter {
+  letter-spacing: 0.08em;
+}
+
+header p.justify {
+  max-width: 520px;
+  margin: 12px auto 0;
+  line-height: 1.7;
+}
+
+/* Quote card */
+.baby-pink {
+  background: #0b1723;
+  color: #e5f2ff;
+  border-radius: 16px;
+  margin: 32px auto;
+  padding: 24px 20px;
+  box-shadow: 0 14px 35px rgba(0, 0, 0, 0.3);
+}
+
+.baby-pink .quote {
+  font-size: 1.1rem;
+  letter-spacing: 0.15em;
+}
+
+.baby-pink p {
+  margin-top: 6px;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* About */
+.wrapper {
+  max-width: 900px;
+  margin: 40px auto;
+  gap: 32px;
+}
+
+.wrapper .bold {
+  font-size: 1.1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.wrapper p {
+  line-height: 1.7;
+  margin-bottom: 8px;
+}
+
+.wrapper .justify.align-center {
+  background: #06111c;
+  padding: 24px 22px;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+}
+
+/* Skills */
+.progress-bar {
+  background: #0b1f31;
+  border-radius: 999px;
+  overflow: hidden;
+  height: 8px;
+}
+
+.progress-bar span {
+  display: block;
+  height: 100%;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #22c1c3 0%, #1d8fe1 50%, #8e54e9 100%);
+}
+
+.skills p {
+  font-size: 0.9rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+/* Adjust widths */
+.python { width: 95%; }
+.ml-mlops { width: 90%; }
+.genai { width: 92%; }
+.data-eng { width: 88%; }
+.cloud { width: 85%; }
+
+.leadership { width: 90%; }
+.architecture { width: 92%; }
+.comm-adapt { width: 88%; }
+.problem-solving { width: 90%; }
+.team-player { width: 85%; }
+
+/* Projects */
+.card.flex {
+  background: #050e19;
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.45);
+  padding: 18px 18px 20px;
+}
+
+.card.flex .padding.bold.center {
+  font-size: 1rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.wrapper .column.card {
+  margin-bottom: 24px;
+}
+
+/* Contact icons */
+.box-contact {
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+}
+
+.box-contact .logo {
+  width: 32px;
+  height: 32px;
+  filter: brightness(1.1);
+  transition: transform 0.15s ease, filter 0.15s ease;
+}
+
+.box-contact .logo:hover {
+  transform: translateY(-2px) scale(1.06);
+  filter: brightness(1.4);
+}
