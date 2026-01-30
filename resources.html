@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resources - Code2Career AI</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'neon-blue': '#06b6d4',
+                        'neon-purple': '#ec4899',
+                        'deep-slate': '#0f172a',
+                        'charcoal': '#1e293b'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .glassmorphism {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .resource-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(6, 182, 212, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-deep-slate text-white font-sans selection:bg-neon-purple/30">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glassmorphism border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter">
+                <a href="index.html" class="gradient-text">Code2Career_AI</a>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-neon-blue transition-colors">Home</a>
+                <a href="resources.html" class="text-neon-blue">Resources</a>
+                <a href="index.html#contact" class="hover:text-neon-blue transition-colors">Contact</a>
+            </div>
+            <button class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-sm hover:bg-white/10 transition-all">
+                Join Community
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-16 px-6">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-5xl md:text-6xl font-black mb-6 tracking-tight">
+                <span class="bg-gradient-to-r from-neon-blue to-neon-purple bg-clip-text text-transparent">Resources</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-400 text-lg">
+                Explore my GitHub projects and read insightful blog posts on AI, Data Engineering, and Career Development
+            </p>
+        </div>
+    </section>
+
+    <!-- GitHub Projects Section -->
+    <section class="pb-16 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="glassmorphism rounded-3xl p-8 md:p-12 border border-white/10 mb-12">
+                <div class="flex items-center gap-4 mb-8">
+                    <i class="fab fa-github text-4xl text-neon-blue"></i>
+                    <h2 class="text-3xl font-bold">GitHub Projects</h2>
+                </div>
+                <p class="text-gray-400 mb-8">Check out my latest open-source projects and contributions</p>
+                
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- GitHub Project Card 1 -->
+                    <div class="resource-card bg-white/5 rounded-xl p-6 border border-white/10 transition-all duration-300">
+                        <div class="flex items-start justify-between mb-4">
+                            <i class="fas fa-code-branch text-2xl text-cyan-400"></i>
+                            <span class="text-xs text-gray-500">Python</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">AI Portfolio Template</h3>
+                        <p class="text-gray-400 text-sm mb-4">Modern portfolio template with glassmorphism design for AI professionals</p>
+                        <a href="https://github.com/RzLetsCode/portfolio-template-main" target="_blank" class="inline-flex items-center gap-2 text-neon-blue hover:text-neon-purple transition-colors">
+                            <span>View on GitHub</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+
+                    <!-- Add More Project Cards Here -->
+                    <div class="resource-card bg-white/5 rounded-xl p-6 border border-white/10 transition-all duration-300">
+                        <div class="flex items-start justify-between mb-4">
+                            <i class="fas fa-robot text-2xl text-purple-400"></i>
+                            <span class="text-xs text-gray-500">LangGraph</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">RAG System</h3>
+                        <p class="text-gray-400 text-sm mb-4">Enterprise-grade RAG system using LangChain and vector databases</p>
+                        <a href="#" target="_blank" class="inline-flex items-center gap-2 text-neon-blue hover:text-neon-purple transition-colors">
+                            <span>View on GitHub</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+
+                    <div class="resource-card bg-white/5 rounded-xl p-6 border border-white/10 transition-all duration-300">
+                        <div class="flex items-start justify-between mb-4">
+                            <i class="fas fa-brain text-2xl text-pink-400"></i>
+                            <span class="text-xs text-gray-500">AI/ML</span>
+                        </div>
+                        <h3 class="text-xl font-bold mb-2">Agentic AI Framework</h3>
+                        <p class="text-gray-400 text-sm mb-4">Multi-agent orchestration framework for complex AI workflows</p>
+                        <a href="#" target="_blank" class="inline-flex items-center gap-2 text-neon-blue hover:text-neon-purple transition-colors">
+                            <span>View on GitHub</span>
+                            <i class="fas fa-external-link-alt text-xs"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Section -->
+    <section class="pb-20 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="glassmorphism rounded-3xl p-8 md:p-12 border border-white/10">
+                <div class="flex items-center gap-4 mb-8">
+                    <i class="fas fa-blog text-4xl text-neon-purple"></i>
+                    <h2 class="text-3xl font-bold">Blog Posts</h2>
+                </div>
+                <p class="text-gray-400 mb-8">Read my latest articles on AI, Data Engineering, and Career Development</p>
+                
+                <div class="space-y-6">
+                    <!-- Blog Post 1 -->
+                    <div class="resource-card bg-white/5 rounded-xl p-6 border border-white/10 transition-all duration-300">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <span class="text-xs px-3 py-1 bg-blue-500/20 border border-blue-500/50 rounded-full text-blue-400">AI Engineering</span>
+                                    <span class="text-xs text-gray-500">5 min read</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-2">From Data Science to AI Engineering: The Transition</h3>
+                                <p class="text-gray-400 mb-4">Learn how to upgrade your skills from traditional data science to modern AI engineering practices</p>
+                                <a href="#" target="_blank" class="inline-flex items-center gap-2 text-neon-blue hover:text-neon-purple transition-colors">
+                                    <span>Read More</span>
+                                    <i class="fas fa-arrow-right text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 2 -->
+                    <div class="resource-card bg-white/5 rounded-xl p-6 border border-white/10 transition-all duration-300">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <span class="text-xs px-3 py-1 bg-purple-500/20 border border-purple-500/50 rounded-full text-purple-400">LangGraph</span>
+                                    <span class="text-xs text-gray-500">8 min read</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-2">Building Production-Ready RAG Systems</h3>
+                                <p class="text-gray-400 mb-4">A comprehensive guide to building scalable RAG systems with LangChain and vector databases</p>
+                                <a href="#" target="_blank" class="inline-flex items-center gap-2 text-neon-blue hover:text-neon-purple transition-colors">
+                                    <span>Read More</span>
+                                    <i class="fas fa-arrow-right text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog Post 3 -->
+                    <div class="resource-card bg-white/5 rounded-xl p-6 border border-white/10 transition-all duration-300">
+                        <div class="flex flex-col md:flex-row gap-6">
+                            <div class="flex-1">
+                                <div class="flex items-center gap-3 mb-3">
+                                    <span class="text-xs px-3 py-1 bg-emerald-500/20 border border-emerald-500/50 rounded-full text-emerald-400">Career</span>
+                                    <span class="text-xs text-gray-500">6 min read</span>
+                                </div>
+                                <h3 class="text-2xl font-bold mb-2">12+ Years in AI: Lessons Learned</h3>
+                                <p class="text-gray-400 mb-4">Key insights and lessons from over a decade of experience in AI and Data Engineering</p>
+                                <a href="#" target="_blank" class="inline-flex items-center gap-2 text-neon-blue hover:text-neon-purple transition-colors">
+                                    <span>Read More</span>
+                                    <i class="fas fa-arrow-right text-xs"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-12 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-500 text-sm">© 2025 Code2Career_AI. Guiding You into Careers of the Future.</p>
+        </div>
+    </footer>
+</body>
+</html>
