@@ -215,6 +215,78 @@
         </div>
     </section>
 
+    
+ <!-- Contact Section -->
+ <section id="contact" class="py-24 px-6 relative z-10 bg-black/20">
+ <div class="max-w-7xl mx-auto">
+ <div class="mb-10 text-center">
+ <p class="text-xs tracking-[0.25em] uppercase text-neon-blue">Contact</p>
+ <h2 class="mt-2 text-4xl font-bold">Let's build your next AI move</h2>
+ <p class="mt-3 text-sm text-gray-400 max-w-2xl mx-auto">Share your project requirements, collaboration ideas, or AI career questions — we usually respond within 24–48 hours.</p>
+ </div>
+
+ <div class="flex items-center justify-center">
+ <div class="relative w-full max-w-xl">
+ <!-- Neon glow -->
+ <div class="pointer-events-none absolute -inset-1 rounded-3xl bg-gradient-to-r from-neon-blue/40 via-sky-400/40 to-neon-purple/40 blur-2xl opacity-70"></div>
+
+ <!-- Glass card -->
+ <div class="relative rounded-3xl border border-neon-blue/70 glassmorphism shadow-[0_0_40px_rgba(6,182,212,0.6)]">
+ <!-- Header with logo + title -->
+ <div class="flex items-center gap-3 px-8 pt-8">
+ <div class="w-10 h-10 bg-gradient-to-tr from-neon-blue to-neon-purple rounded-xl flex items-center justify-center font-bold text-sm">C2C</div>
+ <div>
+ <p class="text-[11px] tracking-[0.25em] uppercase text-neon-blue">Code2Career_AI</p>
+ <h3 class="text-xl md:text-2xl font-semibold">Contact the AI Career Hub</h3>
+ </div>
+ </div>
+
+ <!-- Form -->
+ <form id="contact-form" class="px-8 pb-8 pt-4 space-y-5">
+ <p class="text-sm text-gray-400">Fill in the details below and we'll get back to you with next steps, resources, or a tailored collaboration plan.</p>
+
+ <!-- Error message -->
+ <div id="error-box" class="hidden text-sm rounded-lg border border-red-500/60 bg-red-950/60 px-4 py-2 text-red-200"></div>
+
+ <!-- Success message -->
+ <div id="success-box" class="hidden text-sm rounded-lg border border-emerald-500/60 bg-emerald-950/60 px-4 py-2 text-emerald-200 flex items-center gap-2">
+ <svg class="h-5 w-5 text-emerald-400" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.707a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293A1 1 0 006.293 10.707l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+ <span>Your message has been sent successfully!</span>
+ </div>
+
+ <!-- Full Name -->
+ <div class="space-y-1">
+ <label for="fullName" class="text-xs font-medium uppercase tracking-wide text-gray-300">Full Name</label>
+ <input id="fullName" name="fullName" type="text" placeholder="Rajesh Kumar" class="w-full rounded-xl border border-neon-blue/40 bg-charcoal/80 px-4 py-3 text-sm text-white placeholder:text-gray-500 outline-none focus:border-neon-blue focus:ring-1 focus:ring-neon-blue transition"/>
+ </div>
+
+ <!-- Email -->
+ <div class="space-y-1">
+ <label for="email" class="text-xs font-medium uppercase tracking-wide text-gray-300">Email Address</label>
+ <input id="email" name="email" type="email" placeholder="you@example.com" class="w-full rounded-xl border border-neon-blue/40 bg-charcoal/80 px-4 py-3 text-sm text-white placeholder:text-gray-500 outline-none focus:border-neon-blue focus:ring-1 focus:ring-neon-blue transition"/>
+ </div>
+
+ <!-- Requirement / Comment -->
+ <div class="space-y-1">
+ <label for="message" class="text-xs font-medium uppercase tracking-wide text-gray-300">Requirement / Comment</label>
+ <textarea id="message" name="message" rows="5" placeholder="Describe your project, collaboration idea, or AI career question..." class="w-full rounded-xl border border-neon-blue/40 bg-charcoal/80 px-4 py-3 text-sm text-white placeholder:text-gray-500 outline-none focus:border-neon-blue focus:ring-1 focus:ring-neon-blue transition resize-none"></textarea>
+ </div>
+
+ <!-- Submit button -->
+ <button id="submit-btn" type="submit" class="group relative inline-flex w-full items-center justify-center gap-2 overflow-hidden rounded-xl bg-gradient-to-r from-neon-blue via-sky-500 to-neon-purple px-4 py-3 text-sm font-semibold text-deep-slate shadow-lg shadow-neon-blue/40 transition hover:from-neon-blue/80 hover:via-sky-400 hover:to-neon-purple/80 disabled:cursor-not-allowed disabled:opacity-60">
+ <span class="absolute inset-0 opacity-0 group-hover:opacity-30 bg-[radial-gradient(circle_at_top,_#ffffff44,_transparent_55%)] transition"></span>
+ <span id="btn-label" class="relative">Send Message</span>
+ </button>
+
+ <!-- Tagline -->
+ <div class="pt-3 border-t border-white/10">
+ <p class="text-[11px] text-gray-400 text-center tracking-wide">Guiding You into Careers of the Future</p>
+ </div>
+ </form>
+ </div>
+ </div>
+ </div>
+ </section>
     <!-- Footer -->
     <footer class="py-12 px-6 border-t border-white/10 relative z-10">
         <div class="max-w-7xl mx-auto flex flex-col md:row justify-between items-center space-y-6 md:space-y-0">
@@ -256,5 +328,84 @@
             particlesContainer.appendChild(particle);
         }
     </script>
+    
+ <!-- EmailJS SDK -->
+ <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+ <script type="text/javascript">
+ (function () {
+ // Replace with your real EmailJS public key from dashboard
+ emailjs.init("YOUR_PUBLIC_KEY");
+ })();
+ </script>
+
+ <!-- Contact Form Handler -->
+ <script>
+ const form = document.getElementById('contact-form');
+ const errorBox = document.getElementById('error-box');
+ const successBox = document.getElementById('success-box');
+ const submitBtn = document.getElementById('submit-btn');
+ const btnLabel = document.getElementById('btn-label');
+
+ function showError(msg) {
+ errorBox.textContent = msg;
+ errorBox.classList.remove('hidden');
+ successBox.classList.add('hidden');
+ }
+
+ function showSuccess() {
+ errorBox.classList.add('hidden');
+ successBox.classList.remove('hidden');
+ }
+
+ function validateEmail(email) {
+ return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+ }
+
+ form.addEventListener('submit', function (e) {
+ e.preventDefault();
+
+ const fullName = (document.getElementById('fullName').value || '').trim();
+ const email = (document.getElementById('email').value || '').trim();
+ const message = (document.getElementById('message').value || '').trim();
+
+ if (!fullName || !email || !message) {
+ showError('Please fill in all fields.');
+ return;
+ }
+
+ if (!validateEmail(email)) {
+ showError('Please enter a valid email address.');
+ return;
+ }
+
+ submitBtn.disabled = true;
+ btnLabel.textContent = 'Sending...';
+
+ const serviceID = 'YOUR_SERVICE_ID';   // from EmailJS dashboard
+ const templateID = 'YOUR_TEMPLATE_ID'; // from EmailJS dashboard
+
+ emailjs
+ .send(serviceID, templateID, {
+ from_name: fullName,
+ from_email: email,
+ message: message,
+ to_email: 'PERSONALMYMAIL@GMAIL.COM',
+ })
+ .then(
+ function () {
+ showSuccess();
+ form.reset();
+ submitBtn.disabled = false;
+ btnLabel.textContent = 'Send Message';
+ },
+ function (error) {
+ console.error('EmailJS error:', error);
+ showError('Something went wrong while sending your message. Please try again.');
+ submitBtn.disabled = false;
+ btnLabel.textContent = 'Send Message';
+ }
+ );
+ });
+ </script>
 </body>
 </html>
