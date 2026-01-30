@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code2Career_AI | Guiding You into Careers of the Future</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
@@ -35,255 +37,140 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
-        .particle {
-            position: absolute;
-            background: white;
-            border-radius: 50%;
-            pointer-events: none;
-            opacity: 0.3;
-            animation: float 20s infinite linear;
-        }
-        @keyframes float {
-            0% { transform: translateY(0) translateX(0); }
-            100% { transform: translateY(-100vh) translateX(100vw); }
-        }
-        .resource-scroll::-webkit-scrollbar {
-            height: 6px;
-        }
-        .resource-scroll::-webkit-scrollbar-track {
-            background: rgba(255, 255, 255, 0.05);
-        }
-        .resource-scroll::-webkit-scrollbar-thumb {
-            background: #06b6d4;
-            border-radius: 10px;
-        }
     </style>
 </head>
-<body class="bg-deep-slate text-white font-sans selection:bg-neon-purple/30 overflow-x-hidden">
-    <!-- Particle Background -->
-    <div id="particles" class="fixed inset-0 z-0"></div>
-
-    <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glassmorphism border-b border-white/10 px-6 py-4">
-        <div class="max-w-7xl mx-auto flex justify-between items-center">
-            <div class="flex items-center space-x-2">
-                <div class="w-10 h-10 bg-gradient-to-tr from-neon-blue to-neon-purple rounded-lg flex items-center justify-center font-bold text-xl shadow-lg">C2C</div>
-                <span class="text-xl font-bold tracking-tight">Code2Career<span class="text-neon-blue">_AI</span></span>
+<body class="bg-deep-slate text-white font-sans selection:bg-neon-purple/30">
+    <!-- Navbar -->
+    <nav class="fixed top-0 w-full z-50 glassmorphism border-b border-white/10">
+        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-2xl font-bold tracking-tighter">
+                <span class="gradient-text">Code2Career_AI</span>
             </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium uppercase tracking-widest">
-                <a href="#home" class="hover:text-neon-blue transition">Home</a>
-                <a href="#resources" class="hover:text-neon-blue transition">Resources</a>
-                <a href="#team" class="hover:text-neon-blue transition">Team</a>
-                <a href="#contact" class="hover:text-neon-blue transition">Contact</a>
+            <div class="hidden md:flex space-x-8 text-sm font-medium">
+                <a href="index.html" class="hover:text-neon-blue transition-colors">Home</a>
+                <a href="get-started.html" class="hover:text-neon-blue transition-colors">Get Started</a>
+                <a href="learn-more.html" class="hover:text-neon-blue transition-colors">Learn More</a>
+                <a href="#contact" class="hover:text-neon-blue transition-colors">Contact</a>
             </div>
-            <a href="signup.html" class="hidden md:block bg-neon-blue/20 hover:bg-neon-blue/40 border border-neon-blue text-neon-blue px-6 py-2 rounded-full text-xs font-bold uppercase tracking-widest transition">Join Now</a>
+            <button class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-sm hover:bg-white/10 transition-all">
+                Join Community
+            </button>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center pt-20 px-6 overflow-hidden">
-        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center relative z-10">
-            <div>
-                <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
-                    BUILD THE <br>
-                    <span class="gradient-text uppercase italic tracking-tighter">FUTURE</span> OF AI
-                </h1>
-                <p class="text-xl text-gray-400 mb-10 max-w-lg leading-relaxed">
-                    Empowering the next generation of Data Scientists and AI Architects through hands-on learning and enterprise-grade expertise.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="signup.html" class="bg-neon-blue hover:bg-neon-blue/80 px-8 py-4 rounded-full font-bold transition neon-glow text-center">Get Started</a>
-                    <a href="#resources" class="border border-white/20 hover:bg-white/10 px-8 py-4 rounded-full font-bold transition text-center">Learn More</a>
-                </div>
+    <section id="home" class="relative pt-32 pb-20 px-6 overflow-hidden">
+        <div class="max-w-7xl mx-auto text-center relative z-10">
+            <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tight">
+                UPGRADE TO <br> <span class="gradient-text">AGENTIC AI</span>
+            </h1>
+            <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl mb-10">
+                Guiding you through the transition from Data Science to AI Engineering. Master the future of autonomous systems.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4">
+                <a href="get-started.html" class="px-10 py-4 bg-neon-blue rounded-full font-bold text-deep-slate hover:neon-glow transition-all duration-300">
+                    GET STARTED
+                </a>
+                <a href="learn-more.html" class="px-10 py-4 glassmorphism rounded-full font-bold hover:bg-white/10 transition-all">
+                    LEARN MORE
+                </a>
             </div>
-            <div class="relative group">
-                <div class="absolute -inset-1 bg-gradient-to-r from-neon-blue to-neon-purple rounded-2xl blur opacity-25 group-hover:opacity-50 transition duration-1000"></div>
-                <div class="relative glassmorphism p-4 rounded-2xl border border-white/10 overflow-hidden">
-                    <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=1600" alt="AI Visualization" class="rounded-xl shadow-2xl w-full object-cover h-[500px]">
-                    <!-- Floating Badge -->
-                    <div class="absolute bottom-10 right-10 glassmorphism p-6 rounded-2xl border border-white/20 animate-bounce">
-                        <div class="flex items-center space-x-4">
-                            <div class="w-12 h-12 bg-neon-purple rounded-full flex items-center justify-center font-bold">AI</div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 px-6 relative">
+        <div class="max-w-4xl mx-auto">
+            <div class="glassmorphism rounded-3xl p-8 md:p-12 border border-white/10 relative overflow-hidden">
+                <div class="absolute -top-24 -right-24 w-64 h-64 bg-neon-blue/20 blur-3xl rounded-full"></div>
+                <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-neon-purple/20 blur-3xl rounded-full"></div>
+                
+                <div class="relative z-10">
+                    <div class="mb-12 text-center">
+                        <h2 class="text-4xl font-bold mb-4">Let's <span class="gradient-text">Connect</span></h2>
+                        <p class="text-gray-400">Ready to take your AI career to the next level? Drop me a message.</p>
+                    </div>
+
+                    <form id="contact-form" class="space-y-6">
+                        <div class="grid md:grid-cols-2 gap-6">
                             <div>
-                                <div class="text-xs text-gray-400 uppercase font-bold">Official</div>
-                                <div class="font-bold">Code2Career_AI</div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Your Name</label>
+                                <input type="text" name="user_name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-neon-blue transition-all" placeholder="John Doe">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Email Address</label>
+                                <input type="email" name="user_email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-neon-blue transition-all" placeholder="john@example.com">
                             </div>
                         </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Subject</label>
+                            <select name="subject" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-neon-blue transition-all appearance-none">
+                                <option class="bg-deep-slate">Career Roadmap Inquiry</option>
+                                <option class="bg-deep-slate">Enterprise AI Consultation</option>
+                                <option class="bg-deep-slate">Speaking Engagement</option>
+                                <option class="bg-deep-slate">Collaboration Project</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Message</label>
+                            <textarea name="message" required rows="5" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-neon-blue transition-all" placeholder="Tell me about your project or career goals..."></textarea>
+                        </div>
+
+                        <button type="submit" id="submit-btn" class="w-full py-4 bg-gradient-to-r from-neon-blue to-neon-purple rounded-xl font-bold text-deep-slate hover:scale-[1.02] active:scale-95 transition-all flex justify-center items-center gap-2">
+                            <span>SEND TRANSMISSION</span>
+                            <i class="fas fa-paper-plane text-xs"></i>
+                        </button>
+                    </form>
+
+                    <div id="status-message" class="mt-6 text-center hidden">
+                        <p class="py-3 rounded-xl font-medium"></p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Logo Section (Requested arrangement) -->
-    <section class="py-12 border-y border-white/5 bg-white/5 relative z-10">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <p class="text-xs font-bold text-gray-500 uppercase tracking-[0.3em] mb-8">Official Brand Identity</p>
-            <div class="flex justify-center items-center">
-                <img src="https://github.com/RzLetsCode/portfolio-template-main/blob/main/pdf_front_page.jpg?raw=true" alt="Code2Career_AI Logo" class="h-24 md:h-32 object-contain hover:scale-105 transition duration-500">
-            </div>
-        </div>
-    </section>
+    <!-- EmailJS Integration Logic -->
+    <script>
+        (function() {
+            emailjs.init("YOUR_USER_ID");
+        })();
 
-    <!-- Resource Section (Modern Horizontal Scroll) -->
-    <section id="resources" class="py-24 px-6 relative z-10">
-        <div class="max-w-7xl mx-auto">
-            <div class="flex justify-between items-end mb-12">
-                <div>
-                    <h2 class="text-4xl font-bold mb-2 uppercase">Learning <span class="text-neon-blue">Resources</span></h2>
-                    <p class="text-gray-400">Hand-picked content from our official YouTube and Blogs</p>
-                </div>
-                <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="text-neon-blue hover:underline font-medium">Visit YouTube Channel →</a>
-            </div>
+        const contactForm = document.getElementById('contact-form');
+        const submitBtn = document.getElementById('submit-btn');
+        const statusMsg = document.getElementById('status-message');
+
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
             
-            <div class="resource-scroll flex space-x-6 overflow-x-auto pb-8 scroll-smooth snap-x">
-                <!-- Resource Card 1 -->
-                <div class="min-w-[350px] snap-center glassmorphism rounded-2xl p-4 border border-white/10 group">
-                    <div class="relative aspect-video mb-4 rounded-xl overflow-hidden">
-                        <img src="https://img.youtube.com/vi/S7-V8_v4s30/0.jpg" alt="Video Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                            <div class="w-12 h-12 bg-neon-blue rounded-full flex items-center justify-center pl-1 text-white shadow-lg shadow-neon-blue/50">▶</div>
-                        </div>
-                    </div>
-                    <span class="text-xs text-neon-blue font-bold uppercase tracking-widest mb-2 block">YouTube</span>
-                    <h3 class="text-lg font-bold mb-2 group-hover:text-neon-blue transition">Advanced RAG Architecture</h3>
-                    <p class="text-sm text-gray-400 mb-4 line-clamp-2">Deep dive into building enterprise-grade RAG systems with Snowflake and LLMs.</p>
-                    <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="text-neon-purple text-sm font-bold hover:underline">Watch Now →</a>
-                </div>
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>ENCRYPTING...</span>';
+            statusMsg.classList.add('hidden');
 
-                <!-- Resource Card 2 -->
-                <div class="min-w-[350px] snap-center glassmorphism rounded-2xl p-4 border border-white/10 group">
-                    <div class="relative aspect-video mb-4 rounded-xl overflow-hidden bg-charcoal">
-                        <div class="absolute inset-0 bg-gradient-to-br from-neon-purple/20 to-neon-blue/20"></div>
-                        <div class="absolute inset-0 flex items-center justify-center">
-                            <span class="text-white/20 font-black text-6xl">BLOG</span>
-                        </div>
-                    </div>
-                    <span class="text-xs text-neon-purple font-bold uppercase tracking-widest mb-2 block">Article</span>
-                    <h3 class="text-lg font-bold mb-2 group-hover:text-neon-purple transition">The Future of Agentic AI</h3>
-                    <p class="text-sm text-gray-400 mb-4 line-clamp-2">How multi-agent systems are redefining autonomous operations in 2026.</p>
-                    <a href="#" class="text-neon-purple text-sm font-bold hover:underline">Read Article →</a>
-                </div>
-
-                <!-- Resource Card 3 -->
-                <div class="min-w-[350px] snap-center glassmorphism rounded-2xl p-4 border border-white/10 group">
-                    <div class="relative aspect-video mb-4 rounded-xl overflow-hidden">
-                        <img src="https://img.youtube.com/vi/S7-V8_v4s30/maxresdefault.jpg" alt="Video Thumbnail" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
-                        <div class="absolute inset-0 bg-black/40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition">
-                            <div class="w-12 h-12 bg-neon-blue rounded-full flex items-center justify-center pl-1 text-white shadow-lg shadow-neon-blue/50">▶</div>
-                        </div>
-                    </div>
-                    <span class="text-xs text-neon-blue font-bold uppercase tracking-widest mb-2 block">YouTube</span>
-                    <h3 class="text-lg font-bold mb-2 group-hover:text-neon-blue transition">LangGraph Implementation</h3>
-                    <p class="text-sm text-gray-400 mb-4 line-clamp-2">Step-by-step guide to building complex circular AI workflows with LangGraph.</p>
-                    <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="text-neon-purple text-sm font-bold hover:underline">Watch Now →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Team Section -->
-    <section id="team" class="py-24 px-6 relative z-10">
-        <div class="max-w-7xl mx-auto text-center">
-            <h2 class="text-4xl font-bold mb-16 uppercase">The <span class="gradient-text">Architects</span></h2>
-            <div id="teamGrid" class="grid grid-cols-1 md:grid-cols-3 gap-12">
-                <!-- Rajesh Kumar -->
-                <div class="glassmorphism p-10 rounded-[3rem] text-center hover:neon-glow transition-all duration-700 group border border-white/5 hover:border-neon-blue/30 relative">
-                    <div class="absolute -top-6 left-1/2 -translate-x-1/2 bg-neon-blue px-4 py-1 rounded-full text-[10px] font-black uppercase tracking-widest">Lead</div>
-                    <div class="w-36 h-36 mx-auto mb-8 rounded-full overflow-hidden border-4 border-neon-blue/30 p-2 group-hover:scale-105 transition duration-500 shadow-2xl">
-                        <div class="w-full h-full rounded-full bg-gradient-to-br from-neon-blue to-neon-purple flex items-center justify-center text-4xl font-black">RK</div>
-                    </div>
-                    <h3 class="text-2xl font-black mb-1 group-hover:text-neon-blue transition">Rajesh Kumar</h3>
-                    <p class="text-neon-blue text-xs font-black uppercase tracking-[0.2em] mb-8">Founder & AI Architect</p>
-                    <div class="flex justify-center space-x-4">
-                        <a href="#" class="w-12 h-12 rounded-2xl glassmorphism flex items-center justify-center hover:bg-neon-blue hover:scale-110 transition shadow-lg">in</a>
-                        <a href="#" class="w-12 h-12 rounded-2xl glassmorphism flex items-center justify-center hover:bg-neon-purple hover:scale-110 transition shadow-lg">gh</a>
-                    </div>
-                </div>
-
-                <!-- Team Placeholder 2 -->
-                <div class="glassmorphism p-10 rounded-[3rem] text-center opacity-70 hover:opacity-100 transition-all duration-500 border border-white/5">
-                    <div class="w-36 h-36 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white/5 p-2 grayscale">
-                        <div class="w-full h-full rounded-full bg-charcoal flex items-center justify-center text-4xl font-black text-white/20">AI</div>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-1 text-gray-400 italic">Join the Team</h3>
-                    <p class="text-gray-600 text-xs font-bold uppercase tracking-widest mb-8">ML Engineer</p>
-                    <a href="signup.html" class="inline-block text-neon-blue border border-neon-blue/30 px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-neon-blue hover:text-white transition">Apply Now</a>
-                </div>
-
-                <!-- Team Placeholder 3 -->
-                <div class="glassmorphism p-10 rounded-[3rem] text-center opacity-70 hover:opacity-100 transition-all duration-500 border border-white/5">
-                    <div class="w-36 h-36 mx-auto mb-8 rounded-full overflow-hidden border-4 border-white/5 p-2 grayscale">
-                        <div class="w-full h-full rounded-full bg-charcoal flex items-center justify-center text-4xl font-black text-white/20">DS</div>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-1 text-gray-400 italic">Join the Team</h3>
-                    <p class="text-gray-600 text-xs font-bold uppercase tracking-widest mb-8">Data Scientist</p>
-                    <a href="signup.html" class="inline-block text-neon-purple border border-neon-purple/30 px-6 py-2 rounded-full text-[10px] font-black uppercase tracking-widest hover:bg-neon-purple hover:text-white transition">Apply Now</a>
-                </div>
-            </div>
-        </div>
-    </section>
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    statusMsg.querySelector('p').textContent = "SUCCESS: Transmission received. I'll get back to you soon!";
+                    statusMsg.querySelector('p').className = "py-3 rounded-xl font-medium text-emerald-400 bg-emerald-400/10 border border-emerald-400/20";
+                    statusMsg.classList.remove('hidden');
+                    contactForm.reset();
+                    submitBtn.innerHTML = '<span>SEND TRANSMISSION</span> <i class="fas fa-paper-plane text-xs"></i>';
+                    submitBtn.disabled = false;
+                }, function(error) {
+                    statusMsg.querySelector('p').textContent = "ERROR: Connection failed. Please try again or email directly.";
+                    statusMsg.querySelector('p').className = "py-3 rounded-xl font-medium text-rose-400 bg-rose-400/10 border border-rose-400/20";
+                    statusMsg.classList.remove('hidden');
+                    submitBtn.innerHTML = '<span>RETRY TRANSMISSION</span>';
+                    submitBtn.disabled = false;
+                    console.log('FAILED...', error);
+                });
+        });
+    </script>
 
     <!-- Footer -->
-    <footer id="contact" class="py-20 px-6 border-t border-white/10 relative z-10 bg-black/40">
-        <div class="max-w-7xl mx-auto">
-            <div class="grid md:grid-cols-4 gap-12 mb-16">
-                <div class="col-span-2">
-                    <div class="flex items-center space-x-2 mb-6">
-                        <div class="w-10 h-10 bg-gradient-to-tr from-neon-blue to-neon-purple rounded-lg flex items-center justify-center font-bold text-xl shadow-lg">C2C</div>
-                        <span class="text-xl font-bold tracking-tight">Code2Career<span class="text-neon-blue">_AI</span></span>
-                    </div>
-                    <p class="text-gray-400 max-w-sm leading-relaxed mb-8">Building bridge between aspiring talent and elite AI careers through enterprise-grade architectural training and community mentorship.</p>
-                    <div class="flex space-x-6 text-2xl">
-                        <a href="#" class="text-gray-500 hover:text-neon-blue transition">𝕏</a>
-                        <a href="https://www.youtube.com/@Code2Career_AI" target="_blank" class="text-gray-500 hover:text-neon-purple transition">▶</a>
-                        <a href="#" class="text-gray-500 hover:text-neon-blue transition">in</a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-bold uppercase tracking-widest text-xs mb-8 text-neon-blue">Navigation</h4>
-                    <ul class="space-y-4 text-sm text-gray-400">
-                        <li><a href="#home" class="hover:text-white transition">Home Overview</a></li>
-                        <li><a href="#resources" class="hover:text-white transition">Knowledge Hub</a></li>
-                        <li><a href="#team" class="hover:text-white transition">Team Architects</a></li>
-                        <li><a href="signup.html" class="hover:text-white transition">Career Signup</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold uppercase tracking-widest text-xs mb-8 text-neon-purple">Support</h4>
-                    <ul class="space-y-4 text-sm text-gray-400">
-                        <li><a href="mailto:personalmymail@gmail.com" class="hover:text-white transition">Direct Contact</a></li>
-                        <li><a href="#" class="hover:text-white transition">Privacy Protocol</a></li>
-                        <li><a href="#" class="hover:text-white transition">Usage Terms</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="pt-8 border-t border-white/5 flex flex-col md:row justify-between items-center space-y-4 md:space-y-0 text-[10px] text-gray-600 font-bold uppercase tracking-widest">
-                <p>© 2026 Code2Career_AI Enterprise. All systems operational.</p>
-                <div class="flex space-x-8">
-                    <span>Hinjawadi, IN</span>
-                    <span>v2.0.0-PRO</span>
-                </div>
-            </div>
+    <footer class="py-12 px-6 border-t border-white/10">
+        <div class="max-w-7xl mx-auto text-center">
+            <p class="text-gray-500 text-sm">© 2025 Code2Career_AI. Guiding You into Careers of the Future.</p>
         </div>
     </footer>
-
-    <script>
-        // Particle System
-        const particlesContainer = document.getElementById('particles');
-        const count = 60;
-        for (let i = 0; i < count; i++) {
-            const particle = document.createElement('div');
-            particle.className = 'particle';
-            const size = Math.random() * 3 + 1;
-            particle.style.width = `${size}px`;
-            particle.style.height = `${size}px`;
-            particle.style.left = `${Math.random() * 100}%`;
-            particle.style.top = `${Math.random() * 100}%`;
-            particle.style.animationDuration = `${Math.random() * 15 + 10}s`;
-            particle.style.animationDelay = `${Math.random() * -20}s`;
-            particlesContainer.appendChild(particle);
-        }
-    </script>
 </body>
 </html>
