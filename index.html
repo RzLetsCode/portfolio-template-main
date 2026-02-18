@@ -3,173 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Code2Career_AI | Guiding You into Careers of the Future</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        'neon-blue': '#06b6d4',
-                        'neon-purple': '#ec4899',
-                        'deep-slate': '#0f172a',
-                        'charcoal': '#1e293b'
-                    }
-                }
-            }
-        }
-    </script>
-    <style>
-        .glassmorphism {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            -webkit-backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        .neon-glow {
-            box-shadow: 0 0 20px rgba(6, 182, 212, 0.5), 0 0 40px rgba(236, 72, 153, 0.3);
-        }
-        .gradient-text {
-            background: linear-gradient(135deg, #06b6d4 0%, #ec4899 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-    </style>
+    <meta name="description" content="Professional portfolio - Web Developer & Designer">
+    <meta name="keywords" content="portfolio, web developer, designer, projects">
+    <meta name="author" content="Rajesh Kumar">
+    <base href="/portfolio-template-main/">
+    <title>Home | Professional Portfolio</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap" rel="stylesheet">
 </head>
-<body class="bg-deep-slate text-white font-sans selection:bg-neon-purple/30">
-    <!-- Navbar -->
-    <nav class="fixed top-0 w-full z-50 glassmorphism border-b border-white/10">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="text-2xl font-bold tracking-tighter">
-                <span class="gradient-text">Code2Career_AI</span>
-            </div>
-            <div class="hidden md:flex space-x-8 text-sm font-medium">
-                <a href="index.html" class="hover:text-neon-blue transition-colors">Home</a>
-<a href="resources.html" class="hover:text-neon-blue transition-colors">Resources</a>
-                
-                <a href="#contact" class="hover:text-neon-blue transition-colors">Contact</a>
-            </div>
-            <button class="px-5 py-2 rounded-full bg-white/5 border border-white/10 text-sm hover:bg-white/10 transition-all">
-                Join Community
-            </button>
-        </div>
+<body>
+    <!-- navigation bar -->
+    <nav class="sticky">
+        <label for="drop" class="toggle" id="main-toggle">
+            <span class="nav-icon"></span>
+        </label>
+        <input type="checkbox" id="drop">
+        <ul class="main-nav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about-me.html">About me</a></li>
+            <li><a href="skill-set.html">Skill-set</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="#contact-me">Contact me</a></li>
+        </ul>
     </nav>
 
     <!-- Hero Section -->
-    <section id="home" class="relative pt-32 pb-20 px-6 overflow-hidden">
-        <div class="max-w-7xl mx-auto text-center relative z-10">
-            <h1 class="text-6xl md:text-8xl font-black mb-6 tracking-tight">
-                UPGRADE TO <br> <span class="gradient-text">AGENTIC AI</span>
-            </h1>
-            <p class="max-w-2xl mx-auto text-gray-400 text-lg md:text-xl mb-10">
-                Guiding you through the transition from Data Science to AI Engineering. Master the future of autonomous systems.
-            </p>
-            <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="get-started.html" class="px-10 py-4 bg-neon-blue rounded-full font-bold text-deep-slate hover:neon-glow transition-all duration-300">
-                    VIEW RESOURCES                </a>
-
-                    <a href="resources.html" class="px-10 py-4 bg-neon-blue rounded-full font-bold text-deep-slate hover:neon-glow transition-all duration-300">
-                </a>
+    <section class="hero-section padding">
+        <div class="center">
+            <h1 class="main-title">Welcome to My Portfolio</h1>
+            <p class="subtitle">Web Developer & Designer</p>
+            <p class="padding-top">Creating beautiful and functional digital experiences</p>
+            <div class="padding-top">
+                <a href="portfolio.html" class="button-outline">View My Work</a>
+                <a href="about-me.html" class="button-outline">Learn More</a>
             </div>
         </div>
+    </section>
+
+    <!-- About Preview -->
+    <section class="w-900 padding center">
+        <h2 class="main-title">About Me</h2>
+        <p class="justify">I'm a passionate web developer and designer focused on creating engaging digital experiences. With expertise in modern web technologies and a keen eye for design, I bring ideas to life through clean code and beautiful interfaces.</p>
+        <p class="padding-top">
+            <a href="about-me.html" class="button-outline">Read More</a>
+        </p>
+    </section>
+
+    <!-- Skills Preview -->
+    <section class="w-900 padding center">
+        <h2 class="main-title">Skills & Expertise</h2>
+        <p>Proficient in front-end and back-end development, with a strong foundation in design principles and user experience.</p>
+        <p class="padding-top">
+            <a href="skill-set.html" class="button-outline">View Skills</a>
+        </p>
+    </section>
+
+    <!-- Featured Projects -->
+    <section class="w-900 padding center">
+        <h2 class="main-title">Featured Projects</h2>
+        <p>Explore my latest work showcasing web development, design, and creative solutions.</p>
+        <p class="padding-top">
+            <a href="portfolio.html" class="button-outline">View Portfolio</a>
+        </p>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-24 px-6 relative">
-        <div class="max-w-4xl mx-auto">
-            <div class="glassmorphism rounded-3xl p-8 md:p-12 border border-white/10 relative overflow-hidden">
-                <div class="absolute -top-24 -right-24 w-64 h-64 bg-neon-blue/20 blur-3xl rounded-full"></div>
-                <div class="absolute -bottom-24 -left-24 w-64 h-64 bg-neon-purple/20 blur-3xl rounded-full"></div>
-                
-                <div class="relative z-10">
-                    <div class="mb-12 text-center">
-                        <h2 class="text-4xl font-bold mb-4">Let's <span class="gradient-text">Connect</span></h2>
-                        <p class="text-gray-400">Ready to take your AI career to the next level? Drop me a message.</p>
-                    </div>
-
-                    <form id="contact-form" class="space-y-6">
-                        <div class="grid md:grid-cols-2 gap-6">
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Your Name</label>
-                                <input type="text" name="user_name" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-neon-blue transition-all" placeholder="John Doe">
-                            </div>
-                            <div>
-                                <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Email Address</label>
-                                <input type="email" name="user_email" required class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-neon-blue transition-all" placeholder="john@example.com">
-                            </div>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Subject</label>
-                            <select name="subject" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-neon-blue transition-all appearance-none">
-                                <option class="bg-deep-slate">Career Roadmap Inquiry</option>
-                                <option class="bg-deep-slate">Enterprise AI Consultation</option>
-                                <option class="bg-deep-slate">Speaking Engagement</option>
-                                <option class="bg-deep-slate">Collaboration Project</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-widest text-gray-500 mb-2">Message</label>
-                            <textarea name="message" required rows="5" class="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 focus:outline-none focus:border-neon-blue transition-all" placeholder="Tell me about your project or career goals..."></textarea>
-                        </div>
-
-                        <button type="submit" id="submit-btn" class="w-full py-4 bg-gradient-to-r from-neon-blue to-neon-purple rounded-xl font-bold text-deep-slate hover:scale-[1.02] active:scale-95 transition-all flex justify-center items-center gap-2">
-                            <span>SEND TRANSMISSION</span>
-                            <i class="fas fa-paper-plane text-xs"></i>
-                        </button>
-                    </form>
-
-                    <div id="status-message" class="mt-6 text-center hidden">
-                        <p class="py-3 rounded-xl font-medium"></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <section id="contact-me" class="w-900 padding center">
+        <h2 class="main-title">Get In Touch</h2>
+        <p>Interested in working together? Let's connect and discuss your project.</p>
+        <p class="padding-top">
+            <a href="mailto:your.email@example.com" class="button-outline">Send Email</a>
+        </p>
+        <p class="padding-top">
+            <span class="bold">Connect with me:</span><br>
+            <a class="link colorful-letter" href="https://github.com/RzLetsCode" target="_blank">GitHub</a> | 
+            <a class="link colorful-letter" href="https://linkedin.com" target="_blank">LinkedIn</a>
+        </p>
     </section>
 
-    <!-- EmailJS Integration Logic -->
-    <script>
-        (function() {
-            emailjs.init("YOUR_USER_ID");
-        })();
-
-        const contactForm = document.getElementById('contact-form');
-        const submitBtn = document.getElementById('submit-btn');
-        const statusMsg = document.getElementById('status-message');
-
-        contactForm.addEventListener('submit', function(event) {
-            event.preventDefault();
-            
-            submitBtn.disabled = true;
-            submitBtn.innerHTML = '<span>ENCRYPTING...</span>';
-            statusMsg.classList.add('hidden');
-
-            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
-                .then(function() {
-                    statusMsg.querySelector('p').textContent = "SUCCESS: Transmission received. I'll get back to you soon!";
-                    statusMsg.querySelector('p').className = "py-3 rounded-xl font-medium text-emerald-400 bg-emerald-400/10 border border-emerald-400/20";
-                    statusMsg.classList.remove('hidden');
-                    contactForm.reset();
-                    submitBtn.innerHTML = '<span>SEND TRANSMISSION</span> <i class="fas fa-paper-plane text-xs"></i>';
-                    submitBtn.disabled = false;
-                }, function(error) {
-                    statusMsg.querySelector('p').textContent = "ERROR: Connection failed. Please try again or email directly.";
-                    statusMsg.querySelector('p').className = "py-3 rounded-xl font-medium text-rose-400 bg-rose-400/10 border border-rose-400/20";
-                    statusMsg.classList.remove('hidden');
-                    submitBtn.innerHTML = '<span>RETRY TRANSMISSION</span>';
-                    submitBtn.disabled = false;
-                    console.log('FAILED...', error);
-                });
-        });
-    </script>
-
-    <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-white/10">
-        <div class="max-w-7xl mx-auto text-center">
-            <p class="text-gray-500 text-sm">© 2025 Code2Career_AI. Guiding You into Careers of the Future.</p>
-        </div>
-    </footer>
+    <!-- footer -->
+    <footer>@RzLetsCode 2026 | Professional Portfolio</footer>
 </body>
 </html>
