@@ -1,144 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <!-- META -->
-    <meta name="description" content="Rajesh Kumar – Enterprise AI Architect portfolio and about page.">
-    <meta name="keywords" content="Rajesh Kumar, AI Architect, Data Scientist, Generative AI, Portfolio">
-    <meta name="author" content="Rajesh Kumar">
-
-    <base href="/portfolio-template-main/">
-    <title>About me | Rajesh Kumar</title>
-
-    <!-- CORE STYLES -->
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="style-about-me.css">
-
-    <!-- FONTS -->
+    <meta name="description" content="About Rajesh Kumar - Enterprise AI Architect">
+    <title>About Me | Rajesh Kumar</title>
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;600&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body class="theme-dark">
-    <!-- navigation bar -->
-    <nav class="sticky main-nav-bar">
-        <label for="drop" class="toggle" id="main-toggle">
-            <span class="nav-icon"></span>
-        </label>
-        <input type="checkbox" id="drop">
-        <ul class="main-nav">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="about-me.html" class="nav-link active">About me</a></li>
-            <li><a href="skill-set.html" class="nav-link">Skill-set</a></li>
-            <li><a href="portfolio.html" class="nav-link">Portfolio</a></li>
-            <li><a href="index.html#contact-me" class="nav-link">Contact me</a></li>
-        </ul>
+<body class="light-mode">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">RAJESH<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about-me.html" class="active">About Me</a>
+                <a href="skill-set.html">Skill-Set</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact-me.html">Contact Me</a>
+            </div>
+            <button id="theme-toggle" class="theme-toggle">
+                <svg class="sun-icon" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-12.37c-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06c.39-.39.39-1.03 0-1.41zm-12.37 12.37c-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06c.39-.39.39-1.03 0-1.41z"/></svg>
+            </button>
+        </div>
     </nav>
 
-    <!-- section1 - introduction -->
-    <section class="grid-system-2 w-900 padding section-hero">
-        <section class="center align-center">
-            <div class="image-frame gradient-border">
-                <img class="max-width" src="assets/about-me1.png" alt="picture-of-me">
+    <main class="container">
+        <section class="section">
+            <span class="badge">Professional Profile</span>
+            <h1 class="hero-title" style="font-size: 3.5rem; margin-top: 1rem;">Solving Problems with <span class="highlight">Intelligence</span></h1>
+            
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; margin-top: 4rem; align-items: start;">
+                <div>
+                    <h2 style="font-size: 2rem; margin-bottom: 1.5rem;">Who I Am</h2>
+                    <p style="line-height: 1.8; color: var(--text-secondary); margin-bottom: 1.5rem;">
+                        I am an Enterprise AI Architect with a passion for building scalable, data-driven solutions. With expertise in Snowflake, LangChain, and Python, I bridge the gap between complex AI models and practical business needs.
+                    </p>
+                    <p style="line-height: 1.8; color: var(--text-secondary);">
+                        My mission is to help organizations navigate the rapidly evolving AI landscape by architecting robust infrastructure and agentic workflows that deliver real-world value.
+                    </p>
+                </div>
+                <div class="card" style="padding: 2rem;">
+                    <h3 style="margin-bottom: 1.5rem;">Core Values</h3>
+                    <ul style="list-style: none; padding: 0;">
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <span style="color: var(--accent-primary);">✓</span> Precision in Architecture
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <span style="color: var(--accent-primary);">✓</span> Scalability by Design
+                        </li>
+                        <li style="margin-bottom: 1rem; display: flex; align-items: center; gap: 1rem;">
+                            <span style="color: var(--accent-primary);">✓</span> Ethical AI Implementation
+                        </li>
+                        <li style="display: flex; align-items: center; gap: 1rem;">
+                            <span style="color: var(--accent-primary);">✓</span> Continuous Innovation
+                        </li>
+                    </ul>
+                </div>
             </div>
         </section>
-        <section class="justify">
-            <h2 class="main-title-large accent-underline">Who Am I?</h2>
-            <p>I am Rajesh Kumar, an Enterprise AI Architect who loves turning complex data and business problems into pragmatic AI solutions that actually ship to production.</p>
-            <p>I design and build end‑to‑end systems across data engineering, machine learning, and generative AI—using Python, PySpark, Databricks, Azure, and modern MLOps practices—to create reliable, scalable, and cost‑efficient AI platforms for enterprises.</p>
-            <p>Beyond hands‑on architecture and model development, I enjoy documenting what I learn, mentoring teams, and sharing ideas through my portfolio and blog so that others can build better data and AI systems faster.</p>
-            <p class="quote uppercase center highlight-quote">
-                <span class="colorful-letter">This is important</span>
-                build AI that is useful, reliable, and simple enough for real teams to adopt.
-            </p>
-        </section>
-    </section>
+    </main>
 
-    <!-- section2 - background story -->
-    <section class="grid-system-2 w-900 padding section-alt">
-        <section class="justify">
-            <h2 class="main-title-large center accent-underline">How it all started...</h2>
-            <p>
-                I worked with enterprise requirements and as the world adopted AI, our company did too, which pushed me to evolve from Data Scientist to AI Architect with a clear roadmap into AI and programming.
-            </p>
-            <p class="italic">
-                - From tinkering with basic scripts to designing enterprise-grade AI platforms.
-            </p>
-            <p>
-                I now work as an Enterprise AI Architect, designing GenAI solutions that real teams use every day. I still approach new technologies the same way I did on day one: experiment, break things, learn fast, and then turn those lessons into reliable, scalable systems others can build on.
-            </p>
-        </section>
-        <section class="center align-center">
-            <div class="image-frame soft-shadow">
-                <img class="max-width" src="assets/about-me2.png" alt="story-of-myself">
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>&copy; 2026 Rajesh Kumar. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/RzLetsCode" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/rz111" target="_blank">LinkedIn</a>
+                <a href="mailto:contact@rajeshkumar.tech">Email</a>
             </div>
-        </section>
-    </section>
+        </div>
+    </footer>
 
-    <!-- section3 - future plans -->
-    <section class="w-900 section-card">
-        <section class="baby-pink-light future-card">
-            <h3 class="main-title center accent-underline">Future plans</h3>
-            <ul class="justify padding-list-10">
-                <li class="no-padding-list-item">
-                    I am actively deepening my expertise in <span class="bold colorful-letter">agentic AI systems</span> and enterprise-grade GenAI architectures through continuous learning and hands-on experiments with modern LLM frameworks and cloud platforms.
-                </li>
-                <li class="no-padding-list-item">
-                    On my plate right now is building reusable <span class="bold colorful-letter">AI and data platform blueprints</span> that teams can adopt quickly, along with improving my product thinking and leadership skills so that AI initiatives align tightly with business outcomes.
-                </li>
-            </ul>
-            <p class="justify">
-                I strongly believe in sharing knowledge openly, building practical systems rather than hype, and helping engineers and organizations move from “experiments” to reliable AI products that actually deliver value.
-                <span class="italic">Good engineering, clear thinking, and honest documentation compound over time.</span>
-            </p>
-        </section>
-    </section>
-
-    <!-- section4 - hobbies -->
-    <section class="margin-trbl10 hobbies-section">
-        <section>
-            <h3 class="main-title center padding accent-underline">Hobbies and Free Time Activities</h3>
-        </section>
-        <section class="grid-system-4 w-900">
-            <section class="card small-card justify hobby-card">
-                <img class="box margin-auto hobbies" src="assets/coding.png" alt="hobbies1">
-                <p class="bold center">Building AI projects</p>
-                <p>
-                    I enjoy experimenting with new AI frameworks, agents, and tools in my free time, from small prototypes to end-to-end demos. Many of these experiments later become blog posts, open-source examples, or internal accelerators.
-                </p>
-            </section>
-            <section class="card small-card justify hobby-card">
-                <img class="box margin-auto hobbies" src="assets/board-game.png" alt="hobbies2">
-                <p class="bold center">Learning & teaching</p>
-                <p>
-                    I like turning complex AI concepts into simple explanations, whether through documentation, talks, or content on code2career_ai. Teaching others is one of the best ways I have found to deepen my own understanding.
-                </p>
-            </section>
-            <section class="card small-card justify hobby-card">
-                <img class="box margin-auto hobbies" src="assets/plot-reading.png" alt="hobbies3">
-                <p class="bold center">Reading & research</p>
-                <p>
-                    I spend time reading technical blogs, research summaries, and engineering case studies around GenAI, data platforms, and system design, then translate those ideas into practical patterns I can apply at work and in side projects.
-                </p>
-            </section>
-            <section class="card small-card justify hobby-card">
-                <img class="box margin-auto hobbies" src="assets/dog.png" alt="hobbies4">
-                <p class="bold center">Fitness & unwinding</p>
-                <p>
-                    Outside of screens, I focus on staying active and clearing my head through workouts and time away from devices. That balance helps me return to complex AI problems with better energy and clearer thinking.
-                </p>
-            </section>
-        </section>
-    </section>
-
-    <!-- footer -->
-    <footer class="main-footer">@code2career_ai 2026</footer>
+    <script src="js/theme.js"></script>
 </body>
-
 </html>
