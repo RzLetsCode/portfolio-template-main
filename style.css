@@ -1,83 +1,87 @@
-/* Modern UX/UI Portfolio Styles */
+/* 
+   Modern UX/UI Portfolio Framework 
+   Design System: Minimalist Enterprise Dark Mode
+*/
+
 :root {
-    --bg-dark: #0a0a0c;
-    --card-bg: #16161a;
-    --accent-primary: #6366f1;
-    --accent-secondary: #a855f7;
+    --bg-dark: #020204;
+    --card-bg: #0d0d10;
+    --accent-primary: #818cf8;
+    --accent-secondary: #c084fc;
     --text-main: #f8fafc;
     --text-muted: #94a3b8;
-    --glass: rgba(255, 255, 255, 0.03);
-    --border: rgba(255, 255, 255, 0.1);
+    --glass: rgba(255, 255, 255, 0.02);
+    --border: rgba(255, 255, 255, 0.08);
+    --transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+/* Base Reset */
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    -webkit-font-smoothing: antialiased;
 }
 
 body {
     background-color: var(--bg-dark);
     color: var(--text-main);
     font-family: 'Inter', -apple-system, sans-serif;
-    line-height: 1.6;
+    line-height: 1.5;
     overflow-x: hidden;
+    scroll-behavior: smooth;
 }
 
-/* Glassmorphism Navigation */
+h1, h2, h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-weight: 800;
+}
+
+/* Nav Bar Fixes */
 nav {
     position: fixed;
     top: 0;
     width: 100%;
-    background: rgba(10, 10, 12, 0.8);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
     z-index: 1000;
+    padding: 1.5rem 0;
+    background: rgba(2, 2, 4, 0.7);
+    backdrop-filter: blur(15px);
     border-bottom: 1px solid var(--border);
-    padding: 1.2rem 0;
 }
 
 .nav-container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem;
+    padding: 0 4rem;
 }
 
 .logo {
-    font-weight: 800;
     font-size: 1.5rem;
-    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+    font-weight: 800;
     text-decoration: none;
-    letter-spacing: -1px;
+    color: white;
+    letter-spacing: -1.5px;
 }
 
-.nav-links {
-    display: flex;
-    gap: 2.5rem;
-}
-
+.nav-links { display: flex; gap: 3rem; }
 .nav-links a {
     color: var(--text-muted);
     text-decoration: none;
-    font-weight: 500;
-    font-size: 0.9rem;
-    transition: all 0.3s ease;
+    font-size: 0.85rem;
+    font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.1em;
+    transition: var(--transition);
 }
 
-.nav-links a:hover {
-    color: var(--text-main);
-}
+.nav-links a:hover { color: var(--accent-primary); }
 
-/* Hero Section */
+/* Hero Improvements */
 .hero {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -85,75 +89,80 @@ nav {
     padding: 0 2rem;
 }
 
-.hero-content {
-    text-align: center;
-    z-index: 1;
-}
-
 .hero-content h1 {
-    font-size: clamp(3rem, 10vw, 5.5rem);
-    font-weight: 900;
-    line-height: 1.1;
+    font-size: clamp(3rem, 10vw, 7rem);
+    line-height: 0.9;
     margin-bottom: 2rem;
     letter-spacing: -0.05em;
+    text-transform: uppercase;
 }
 
 .hero-content p {
-    font-size: 1.2rem;
+    font-size: 1.25rem;
     color: var(--text-muted);
-    max-width: 650px;
+    max-width: 700px;
     margin: 0 auto 3rem;
 }
 
-/* Bento Grid */
+/* Bento Grid System */
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    gap: 1.5rem;
-    margin-top: 4rem;
+    gap: 2rem;
 }
 
 .bento-card {
     background: var(--card-bg);
     border: 1px solid var(--border);
-    border-radius: 32px;
-    padding: 3rem;
-    transition: all 0.5s ease;
+    border-radius: 40px;
+    padding: 4rem;
+    transition: var(--transition);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .bento-card:hover {
-    transform: translateY(-10px);
     border-color: var(--accent-primary);
+    transform: translateY(-10px);
 }
 
-.card-large { grid-column: span 8; }
-.card-medium { grid-column: span 4; }
+.card-large { grid-column: span 7; }
+.card-medium { grid-column: span 5; }
 
-/* Contact Section */
+/* Contact Section Redesign */
 .contact-container {
-    background: var(--card-bg);
+    background: #08080a;
     border: 1px solid var(--border);
-    border-radius: 48px;
-    padding: 5rem;
+    border-radius: 60px;
+    padding: 6rem;
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 5rem;
-    align-items: center;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 6rem;
+    align-items: start;
+}
+
+.contact-info h2 {
+    font-size: clamp(3rem, 6vw, 5.5rem);
+    line-height: 1;
+    margin-bottom: 2rem;
 }
 
 .contact-form {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
+    width: 100%;
 }
 
 .input-field {
     background: var(--glass);
     border: 1px solid var(--border);
-    padding: 1.2rem 1.8rem;
-    border-radius: 20px;
+    padding: 1.5rem 2rem;
+    border-radius: 24px;
     color: white;
-    font-size: 1rem;
+    font-size: 1.1rem;
+    transition: var(--transition);
 }
 
 .input-field:focus {
@@ -162,27 +171,30 @@ nav {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, var(--accent-primary), var(--accent-secondary));
-    color: white;
+    background: white;
+    color: black;
     border: none;
-    padding: 1.2rem;
-    border-radius: 20px;
-    font-size: 1rem;
+    padding: 1.5rem;
+    border-radius: 24px;
+    font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: var(--transition);
 }
 
 .btn-primary:hover {
-    opacity: 0.9;
+    background: var(--accent-primary);
+    color: white;
+    transform: scale(0.98);
 }
 
-@media (max-width: 992px) {
-    .contact-container { grid-template-columns: 1fr; padding: 3rem; }
+/* Mobile Adjustments */
+@media (max-width: 1024px) {
+    .contact-container { grid-template-columns: 1fr; padding: 4rem; gap: 4rem; }
     .card-large, .card-medium { grid-column: span 12; }
 }
 
-/* Typography Fix */
-h1, h2, h3 {
-    font-family: 'Plus Jakarta Sans', sans-serif;
+@media (max-width: 640px) {
+    .hero-content h1 { font-size: 3.5rem; }
+    .nav-links { display: none; }
 }
