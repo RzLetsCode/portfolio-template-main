@@ -1,158 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog | RzLetsCode</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="style-blog.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Technical Blog - Rajesh Kumar | Enterprise AI Architect">
+    <title>Blog | Rajesh Kumar</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-top: 4rem;
+        }
+        .blog-card {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            height: 100%;
+        }
+        .blog-tag {
+            display: inline-block;
+            padding: 4px 12px;
+            background: var(--bg-neutral);
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-primary);
+            margin-bottom: 1rem;
+        }
+        .blog-date {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 0.5rem;
+        }
+    </style>
 </head>
 <body>
-  <!-- Navigation Bar -->
-  <nav class="nav-bar">
-    <a href="index.html" class="nav-logo">RzLetsCode</a>
-    <ul class="nav-links">
-      <li><a href="about-me.html">About</a></li>
-      <li><a href="skill-set.html">Skills</a></li>
-      <li><a href="portfolio.html">Projects</a></li>
-      <li><a href="resources.html">Resources</a></li>
-      <li><a href="blog.html" class="nav-active">Blog</a></li>
-      <li><a href="videos.html">Videos</a></li>
-      <li><a href="get-started.html" class="cta-link">Get Started</a></li>
-    </ul>
-  </nav>
+    <!-- Navbar -->
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo" style="font-family: 'Poppins'; font-weight: 800; color: var(--text-primary); text-decoration: none; font-size: 1.5rem;">RAJESH.</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+                <a href="skillset.html">Skill-Set</a>
+                <a href="portfolio.html">Portfolio</a>
+                <a href="blog.html" class="active">Blog</a>
+                <a href="contact.html">Contact Me</a>
+                <div class="theme-toggle">☀️</div>
+            </div>
+        </div>
+    </nav>
 
-  <main class="section-wrapper">
-    <!-- Section Header -->
-    <section class="section-header">
-      <h1 class="section-title">Blog</h1>
-      <p class="section-subtitle">
-        Deep dives into Generative AI, RAG systems, MLOps, and real-world case studies from the trenches.
-      </p>
-    </section>
+    <main style="max-width: 1200px; margin: 0 auto; padding: 100px 2rem;">
+        <span style="color: var(--accent-primary); font-weight: 700; letter-spacing: 0.2em; font-size: 0.8rem;">TECHNICAL BLOG</span>
+        <h1 style="margin-top: 1rem;">Insights on <span style="color: var(--accent-primary);">Enterprise AI</span></h1>
+        <p style="font-size: 1.2rem; margin-top: 1rem; max-width: 600px;">Deep dives into LLMOps, Snowflake architecture, and building agentic workflows.</p>
 
-    <!-- Blog Grid -->
-    <section class="content-grid blog-grid">
-      <!-- Blog Card 1 -->
-      <article class="blog-card">
-        <div class="blog-meta">
-          <span class="blog-tag">Generative AI</span>
-          <span class="blog-date">Jan 2026</span>
-        </div>
-        <h2 class="blog-title">
-          From PoC to Production: Shipping a GenAI Feature Safely
-        </h2>
-        <p class="blog-excerpt">
-          A step-by-step blueprint for taking an LLM-powered feature from notebook experiments to a robust, observable production service with proper error handling and cost controls.
-        </p>
-        <div class="blog-links">
-          <a href="#" class="btn-primary-sm">Read post</a>
-          <a href="#" class="text-link-sm">View Code2Career_AI →</a>
-        </div>
-      </article>
+        <div class="blog-grid">
+            <!-- Blog 1 -->
+            <article class="card blog-card">
+                <div>
+                    <span class="blog-tag">LLMOps</span>
+                    <p class="blog-date">July 26, 2025</p>
+                    <h3 style="margin-bottom: 1rem;">Productionizing LLM Apps: A Comprehensive Guide</h3>
+                    <p>A deep dive into observability, guardrails, and LLMOps for enterprise-grade AI applications.</p>
+                </div>
+                <a href="https://code2careerai.hashnode.dev/productionizing-llm-apps-a-comprehensive-guide-to-observability-guardrails-and-llmops" target="_blank" class="btn btn-primary" style="text-decoration: none; margin-top: 2rem; text-align: center;">Read Article</a>
+            </article>
 
-      <!-- Blog Card 2 -->
-      <article class="blog-card">
-        <div class="blog-meta">
-          <span class="blog-tag">RAG</span>
-          <span class="blog-date">Dec 2025</span>
-        </div>
-        <h2 class="blog-title">
-          RAG Done Right: Designing Retrieval for Enterprise Data
-        </h2>
-        <p class="blog-excerpt">
-          Lessons learned building RAG systems with Snowflake, Azure OpenAI, and vector databases in healthcare and insurance environments. Focus on chunking strategies.
-        </p>
-        <div class="blog-links">
-          <a href="#" class="btn-primary-sm">Read post</a>
-          <a href="#" class="text-link-sm">Visit Blog →</a>
-        </div>
-      </article>
+            <!-- Blog 2 -->
+            <article class="card blog-card">
+                <div>
+                    <span class="blog-tag">Enterprise AI</span>
+                    <p class="blog-date">April 9, 2025</p>
+                    <h3 style="margin-bottom: 1rem;">The Missing Link: Model Context Protocol (MCP)</h3>
+                    <p>How MCP safely bridges the gap between Large Language Models and sensitive enterprise data.</p>
+                </div>
+                <a href="https://code2careerai.hashnode.dev/the-missing-link-how-the-model-context-protocol-mcp-safely-bridges-llms-and-enterprise-data" target="_blank" class="btn btn-primary" style="text-decoration: none; margin-top: 2rem; text-align: center;">Read Article</a>
+            </article>
 
-      <!-- Blog Card 3 -->
-      <article class="blog-card">
-        <div class="blog-meta">
-          <span class="blog-tag">MLOps</span>
-          <span class="blog-date">Nov 2025</span>
-        </div>
-        <h2 class="blog-title">
-          Observability in Production LLM Systems
-        </h2>
-        <p class="blog-excerpt">
-          Building monitoring and debugging infrastructure for LLM applications. Covers latency tracking, token usage optimization, and cost attribution across teams.
-        </p>
-        <div class="blog-links">
-          <a href="#" class="btn-primary-sm">Read post</a>
-          <a href="#" class="text-link-sm">GitHub Repo →</a>
-        </div>
-      </article>
+            <!-- Blog 3 -->
+            <article class="card blog-card">
+                <div>
+                    <span class="blog-tag">RAG</span>
+                    <p class="blog-date">June 5, 2024</p>
+                    <h3 style="margin-bottom: 1rem;">Architecting Enterprise RAG on Snowflake</h3>
+                    <p>A technical deep dive into implementing high-performance RAG systems on the Snowflake platform.</p>
+                </div>
+                <a href="https://code2careerai.hashnode.dev/architecting-enterprise-rag-on-snowflake-a-technical-deep-dive" target="_blank" class="btn btn-primary" style="text-decoration: none; margin-top: 2rem; text-align: center;">Read Article</a>
+            </article>
 
-      <!-- Blog Card 4 -->
-      <article class="blog-card">
-        <div class="blog-meta">
-          <span class="blog-tag">Architecture</span>
-          <span class="blog-date">Oct 2025</span>
+            <!-- Blog 4 -->
+            <article class="card blog-card">
+                <div>
+                    <span class="blog-tag">Agents</span>
+                    <p class="blog-date">March 9, 2024</p>
+                    <h3 style="margin-bottom: 1rem;">From Chains to Brains: Building Agentic Workflows</h3>
+                    <p>Using LangGraph and Azure OpenAI to create sophisticated autonomous AI agents.</p>
+                </div>
+                <a href="https://code2careerai.hashnode.dev/from-chains-to-brains-building-agentic-workflows-with-langgraph-and-azure-openai" target="_blank" class="btn btn-primary" style="text-decoration: none; margin-top: 2rem; text-align: center;">Read Article</a>
+            </article>
+Update blog.html with real articles from Hashnode and apply Enterprise Light Mode design.            <!-- Blog 5 -->
+            <article class="card blog-card">
+                <div>
+                    <span class="blog-tag">Data Engineering</span>
+                    <p class="blog-date">September 17, 2023</p>
+                    <h3 style="margin-bottom: 1rem;">Evolution: From Data Pipelines to GenAI Platforms</h3>
+                    <p>A practical guide to the shift from traditional ETL to dynamic generative AI platforms.</p>
+                </div>
+                <a href="https://code2careerai.hashnode.dev/from-data-pipelines-to-genai-platforms-a-practical-guide-to-the-evolution" target="_blank" class="btn btn-primary" style="text-decoration: none; margin-top: 2rem; text-align: center;">Read Article</a>
+            </article>
         </div>
-        <h2 class="blog-title">
-          Multi-Agent Systems with LangGraph
-        </h2>
-        <p class="blog-excerpt">
-          A practical guide to building orchestrated multi-agent systems. Includes state management, tool calling patterns, and deploying agents at scale with proper error handling.
-        </p>
-        <div class="blog-links">
-          <a href="#" class="btn-primary-sm">Read post</a>
-          <a href="#" class="text-link-sm">Explore Guide →</a>
-        </div>
-      </article>
+    </main>
 
-      <!-- Blog Card 5 -->
-      <article class="blog-card">
-        <div class="blog-meta">
-          <span class="blog-tag">Data Engineering</span>
-          <span class="blog-date">Sep 2025</span>
+    <footer>
+        <div style="max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 2rem;">
+            <p>© 2026 Rajesh Kumar. Enterprise Excellence.</p>
+            <div style="display: flex; gap: 1.5rem;">
+                <a href="https://github.com/RzLetsCode" style="color: var(--text-muted); text-decoration: none;">GitHub</a>
+                <a href="#" style="color: var(--text-muted); text-decoration: none;">LinkedIn</a>
+                <a href="mailto:rajesh@example.com" style="color: var(--text-muted); text-decoration: none;">Email</a>
+            </div>
         </div>
-        <h2 class="blog-title">
-          Semantic Chunking for RAG Systems
-        </h2>
-        <p class="blog-excerpt">
-          Beyond token-based chunking: implementing semantic-aware text splitting for better retrieval quality. Includes benchmarks against traditional methods and best practices.
-        </p>
-        <div class="blog-links">
-          <a href="#" class="btn-primary-sm">Read post</a>
-          <a href="#" class="text-link-sm">Read on Blog →</a>
-        </div>
-      </article>
+    </footer>
 
-      <!-- Blog Card 6 -->
-      <article class="blog-card">
-        <div class="blog-meta">
-          <span class="blog-tag">Healthcare AI</span>
-          <span class="blog-date">Aug 2025</span>
-        </div>
-        <h2 class="blog-title">
-          AI in Medical Claims Processing
-        </h2>
-        <p class="blog-excerpt">
-          Real-world case study: Building an AI system to automate claim validation in healthcare. Discusses compliance, accuracy metrics, and integration with legacy systems.
-        </p>
-        <div class="blog-links">
-          <a href="#" class="btn-primary-sm">Read post</a>
-          <a href="#" class="text-link-sm">Case Study →</a>
-        </div>
-      </article>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer-content">
-      <p>&copy; 2026 RzLetsCode. All rights reserved.</p>
-      <div class="social-links">
-        <a href="https://github.com/RzLetsCode" target="_blank">GitHub</a>
-        <a href="https://www.linkedin.com/in/rzletscode" target="_blank">LinkedIn</a>
-        <a href="https://twitter.com/code2career_ai" target="_blank">Twitter</a>
-      </div>
-    </div>
-  </footer>
+    <script src="js/theme.js"></script>
 </body>
 </html>
