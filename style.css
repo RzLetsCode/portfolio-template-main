@@ -73,7 +73,6 @@ nav {
 
 .nav-links a:hover {
     color: var(--text-main);
-    transform: translateY(-1px);
 }
 
 /* Hero Section */
@@ -86,18 +85,6 @@ nav {
     padding: 0 2rem;
 }
 
-.hero::before {
-    content: '';
-    position: absolute;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, rgba(99, 102, 241, 0.15) 0%, transparent 70%);
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    pointer-events: none;
-}
-
 .hero-content {
     text-align: center;
     z-index: 1;
@@ -106,7 +93,7 @@ nav {
 .hero-content h1 {
     font-size: clamp(3rem, 10vw, 5.5rem);
     font-weight: 900;
-    line-height: 1;
+    line-height: 1.1;
     margin-bottom: 2rem;
     letter-spacing: -0.05em;
 }
@@ -116,14 +103,12 @@ nav {
     color: var(--text-muted);
     max-width: 650px;
     margin: 0 auto 3rem;
-    font-weight: 400;
 }
 
 /* Bento Grid */
 .bento-grid {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    grid-auto-rows: minmax(100px, auto);
     gap: 1.5rem;
     margin-top: 4rem;
 }
@@ -133,21 +118,16 @@ nav {
     border: 1px solid var(--border);
     border-radius: 32px;
     padding: 3rem;
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    transition: all 0.5s ease;
 }
 
 .bento-card:hover {
-    transform: scale(1.02);
-    border-color: rgba(99, 102, 241, 0.5);
-    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+    transform: translateY(-10px);
+    border-color: var(--accent-primary);
 }
 
-.card-large { grid-column: span 8; grid-row: span 2; }
-.card-medium { grid-column: span 4; grid-row: span 2; }
-.card-wide { grid-column: span 12; }
+.card-large { grid-column: span 8; }
+.card-medium { grid-column: span 4; }
 
 /* Contact Section */
 .contact-container {
@@ -159,15 +139,6 @@ nav {
     grid-template-columns: 1fr 1fr;
     gap: 5rem;
     align-items: center;
-    position: relative;
-    overflow: hidden;
-}
-
-.contact-info h2 {
-    font-size: 4rem;
-    font-weight: 800;
-    line-height: 1;
-    margin-bottom: 2rem;
 }
 
 .contact-form {
@@ -183,13 +154,11 @@ nav {
     border-radius: 20px;
     color: white;
     font-size: 1rem;
-    transition: all 0.3s ease;
 }
 
 .input-field:focus {
     outline: none;
     border-color: var(--accent-primary);
-    background: rgba(255,255,255,0.05);
 }
 
 .btn-primary {
@@ -201,12 +170,11 @@ nav {
     font-size: 1rem;
     font-weight: 700;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .btn-primary:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+    opacity: 0.9;
 }
 
 @media (max-width: 992px) {
@@ -214,7 +182,7 @@ nav {
     .card-large, .card-medium { grid-column: span 12; }
 }
 
-@media (max-width: 600px) {
-    .hero-content h1 { font-size: 3.5rem; }
-    .contact-info h2 { font-size: 2.5rem; }
+/* Typography Fix */
+h1, h2, h3 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
 }
