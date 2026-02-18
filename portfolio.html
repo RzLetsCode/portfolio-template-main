@@ -1,127 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Review this part and modify it to your liking -->
-    <meta name="description" content="Sample text for portfolio template meta tag">
-    <meta name="keywords" content="Sample text for portfolio template meta tag">
-    <meta name="author" content="Sample text for portfolio template meta tag">
-     <base href="/portfolio-template-main/">
-    <title>Portfolio</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <!-- This page benefits from the main css and also from the about-me css, that is why all 3 is linked -->
-    <link rel="stylesheet" type="text/css" href="style-about-me.css">
-    <link rel="stylesheet" type="text/css" href="style-portfolio.css">
-    <!-- font for the quote -->
+    <meta name="description" content="Projects of Rajesh Kumar - Enterprise AI Architect">
+    <title>Portfolio | Rajesh Kumar</title>
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&display=swap" rel="stylesheet">
-    <!-- font for the body -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400&display=swap" rel="stylesheet">
-    <!-- font for headings -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
-
-<body>
-    <!-- navigation bar -->
-    <nav class="sticky">
-        <label for="drop" class="toggle" id="main-toggle">
-            <span class="nav-icon"></span>
-        </label>
-        <input type="checkbox" id="drop">
-        <ul class="main-nav">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about-me.html">About me</a></li>
-            <li><a href="skill-set.html">Skill-set</a></li>
-            <li><a href="portfolio.html">Portfolio</a></li>
-            <li><a href="index.html#contact-me">Contact me</a></li>
-        </ul>
+<body class="light-mode">
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">RAJESH<span>.</span></a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about-me.html">About Me</a>
+                <a href="skill-set.html">Skill-Set</a>
+                <a href="portfolio.html" class="active">Portfolio</a>
+                <a href="blog.html">Blog</a>
+                <a href="contact-me.html">Contact Me</a>
+            </div>
+            <button id="theme-toggle" class="theme-toggle">
+                <svg class="sun-icon" viewBox="0 0 24 24"><path d="M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0s-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41l-1.06-1.06zm1.06-12.37c-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06c.39-.39.39-1.03 0-1.41zm-12.37 12.37c-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06c.39-.39.39-1.03 0-1.41z"/></svg>
+            </button>
+        </div>
     </nav>
 
-    <!-- Use align center accordingly as it my center vertically the image or the text. Or if you do not want to use it at all, then just delete it -->
-    <!-- project1 -->
-    <section class="grid-system-2 w-900 padding">
-        <section class="justify align-center">
-            <h3 class="main-title padding-top">Project name</h3>
-            <p>Project details here.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum magni earum incidunt a voluptatem aliquam,
-                nostrum labore nihil quas adipisci doloribus placeat mollitia minima facere velit amet ducimus atque
-                iusto.
-            </p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Amet iusto inventore cupiditate nobis odio
-                dolore.
-                Fuga sit placeat, rem odit porro ipsum autem reprehenderit, odio labore architecto officiis amet
-                quibusdam.
-            </p>
-            <p class="center">Links:
-                <span class="center">
-                    <a class="link colorful-letter" href="https://www.behance.net/" target="_blank">Behance</a>
-                    <span> |</span>
-                    <a class="link colorful-letter" href="https://www.instagram.com/" target="_blank">Instagram</a>
-                </span>
-            </p>
-            <p class="padding-top"><a href="project1.html" class="button-outline">More info</a></p>
+    <main class="container">
+        <section class="section">
+            <span class="badge">Project Showcase</span>
+            <h1 class="hero-title" style="font-size: 3.5rem; margin-top: 1rem;">Selected <span class="highlight">Works</span></h1>
+            
+            <div class="bento-grid" style="margin-top: 4rem;">
+                <div class="card">
+                    <h3 class="card-title">Enterprise RAG on Snowflake</h3>
+                    <p class="card-text">End-to-end RAG pipeline using Snowflake Cortex and LangChain for secure document retrieval.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">Agentic Workflow Engine</h3>
+                    <p class="card-text">Autonomous task execution system built with LangGraph and Azure OpenAI.</p>
+                </div>
+                <div class="card">
+                    <h3 class="card-title">MCP Data Connector</h3>
+                    <p class="card-text">Implementation of Model Context Protocol for safe enterprise data access by LLMs.</p>
+                </div>
+            </div>
         </section>
-        <section class="center">
-            <p><a href="project1.html"><img class="max-width" src="assets/project1.png" alt="project1"></a>
-        </section>
-    </section>
+    </main>
 
-    <!-- project2 -->
-    <section class="grid-system-2 w-900 padding">
-        <section class="justify align-center">
-            <h3 class="main-title padding-top">Project name</h3>
-            <p>Project details here.</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi eaque incidunt recusandae. Quae
-                beatae dolore ullam a suscipit, vitae ut at! Exercitationem eos fugiat doloribus inventore amet quo,
-                esse incidunt?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique iste veritatis nobis nesciunt ea
-                quod rem enim magnam harum necessitatibus debitis laudantium, incidunt animi vel, neque ratione
-                atque sint molestias.</p>
-            <p class="center">Link:
-                <a class="link colorful-letter" href="https://m.facebook.com/" target="_blank">Facebook</a>
-            </p>
-            <p class="padding-top"><a href="project2.html" class="button-outline">More info</a></p>
-        </section>
-        <section class="center padding-top align-center">
-            <p><a href="project2.html"><img class="max-width" src="assets/project2.png" alt="project2"></a></p>
-        </section>
-    </section>
+    <footer class="footer">
+        
+        <div class="container footer-content">
+            <p>&copy; 2026 Rajesh Kumar. All rights reserved.</p>
+            <div class="social-links">
+                <a href="https://github.com/RzLetsCode" target="_blank">GitHub</a>
+                <a href="https://linkedin.com/in/rz111" target="_blank">LinkedIn</a>
+                <a href="mailto:contact@rajeshkumar.tech">Email</a>
+            </div>
+        </div>
+    </footer>
 
-    <!-- project3 -->
-    <section class="grid-system-2 w-900 padding">
-        <section class="justify">
-            <h3 class="main-title padding-top">Project name</h3>
-            <p>Project details here.</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Exercitationem quae inventore dignissimos,
-                ullam, molestiae veniam temporibus distinctio quis expedita dolor, suscipit alias. Nulla maxime
-                officiis nobis sed fugiat tenetur excepturi.</p>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Repudiandae quae qui dolore architecto.
-                Ipsam quibusdam sit in ab corporis sapiente, non facere sint aspernatur ipsum ullam voluptatibus
-                necessitatibus aperiam nobis!</p>
-            <p class="center">Link:
-                <span class="bold colorful-letter"><a class="link" href="https://github.com/"
-                        target="_blank">GitHub</a></span>.
-            </p>
-            <p class="padding-top"><a href="project3.html" class="button-outline">More info</a></p>
-        </section>
-        <section class="center">
-            <p><a href="project3.html"><img class="max-width" src="assets/project3.png" alt="project3"></a>
-        </section>
-    </section>
-
-    <!-- footer -->
-    <footer>@iluskaland 2024</footer>
+    <script src="js/theme.js"></script>
 </body>
-
 </html>
